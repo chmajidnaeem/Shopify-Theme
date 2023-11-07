@@ -8,6 +8,7 @@ import ImageCarousel from "./Slider";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { GoCommentDiscussion } from "react-icons/go";
+import { FaGreaterThan } from "react-icons/fa6";
 
 const Blog = () => {
   return (
@@ -21,12 +22,12 @@ const Blog = () => {
           </h1>
         </div>
         <div className="text-white text-xl flex items-center justify-center absolute top-48 font-bold left-[615px]">
-          <Link href="/">Home</Link>
-          <span className="mx-2"> t </span>
+          <Link href="/" className="hover:text-green duration-700">Home</Link>
+          <span className="mx-2 "> <FaGreaterThan /> </span>
           <Link href="/">News</Link>
         </div>
       </div>
-      <div className="flex mt-44">
+      <div className="flex mt-28">
         {/* left side  */}
         <div className="w-[500px] pl-12 ">
           <div>
