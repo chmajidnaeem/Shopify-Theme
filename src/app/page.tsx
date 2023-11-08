@@ -1,3 +1,4 @@
+
 "use client"
 
 import Navbar from "./components/layout/Navbar"
@@ -37,5 +38,13 @@ export default function Home() {
 
     {/* <VideoUpload/> */}
     </>
+
+import Image from 'next/image'
+import Blog from './components/Blog'
+
+export default function Home() {
+  return (
+    <Blog />
+
   )
 }
