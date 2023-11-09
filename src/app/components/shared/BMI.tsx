@@ -65,8 +65,8 @@ const BMI = () => {
             <table>
               <thead className="text-center">
                 <tr>
-                  <th className="border border-[#EEE] border-t-0 border-l-0 py-4 md:px-28">Bmi</th>
-                  <th className="border border-[#EEE] border-t-0 border-r-0 md:px-24">Weight Status</th>
+                  <th className="border border-[#EEE] border-t-0 border-l-0 py-4 md:px-28 uppercase">Bmi</th>
+                  <th className="border border-[#EEE] border-t-0 border-r-0 md:px-24 uppercase">Weight Status</th>
                 </tr>
               </thead>
               <tbody className="text-center">

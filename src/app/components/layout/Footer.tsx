@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="bg-black text-[#FFF]">
       <Wrapper>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-18 ">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-18 ">
           <div>
             <Image src={Logo} alt={"log"} className="w-40 mt-[90px]" />
             <p className="mt-10 leading-7">
@@ -23,9 +23,9 @@ const Footer = () => {
           </div>
           {/* #2 */}
           <div>
-            <div className="text-[24px] font-bold mt-[90px]">Useful-Links</div>
+            <div className="lg:text-[24px] font-bold mt-[90px]">Useful-Links</div>
             <ul className="marker:text-green list-outside list-disc ml-6">
-              <li className="hover:text-green mt-10 leading-10">Lifting weights</li>
+              <li className="hover:text-green lg:mt-10 leading-10">Lifting weights</li>
               <li className="hover:text-green leading-10">Cardio Classes</li>
               <li className="hover:text-green leading-10">New To Fitness</li>
               <li className="hover:text-green leading-10">Muscle Builder</li>
@@ -35,15 +35,15 @@ const Footer = () => {
           {/* #3 */}
           <div>
             <div className="text-[24px] font-bold mt-[90px]">Location</div>
-            <div className="flex gap-2 mt-10 leading-10">
+            <div className="flex gap-2 lg:mt-10 leading-10">
               <FaLocationPin className={"text-green mt-3"} />
               <p>Karachi, Sindh</p>
             </div>
-            <div className="flex gap-2 leading-10">
+            <div className="flex gap-2 leading-10 invisible sm:visible">
               <AiTwotonePhone className={"text-green mt-3"} />
               <p className=" hover:text-green">Info@Peacefulthemes.Com</p>
             </div>
-            <div className="flex gap-2 leading-10">
+            <div className="flex gap-2 leading-10 invisible sm:visible">
               <HiMail className={"text-green mt-3"} />
               <p className=" hover:text-green">+1800-001-658</p>
             </div>
@@ -51,12 +51,12 @@ const Footer = () => {
           {/* #4 */}
           <div>
             <div className="text-[24px] font-bold mt-[90px]">Subscribe</div>
-            <div className="flex gap-32 mt-10">
+            <div className="flex lg:gap-32 lg:mt-10">
               <p className=" hover:text-green ">Your email address</p>
               <BsSend className={"text-green mt-1"} />
             </div>
             <div className="border-b border-green mt-4"></div>
-            <p className="mt-10 leading-8">
+            <p className="lg:mt-10 leading-8">
               It is a long established fact that a reader will be distracted by
               the readable
             </p>

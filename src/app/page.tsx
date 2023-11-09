@@ -18,8 +18,9 @@ import ClientQuot from "./components/widgets/ClientQuot"
 
 export default function Home() {
   return (
-    <>
-    <Navbar/>
+   <>
+    <Navbar />
+    
     <Hero/>
     <Slider/>
     <Collection/>
@@ -35,16 +36,8 @@ export default function Home() {
     <BMI/>
     <ClientQuot/>
     <Blog/>
-
-    {/* <VideoUpload/> */}
     </>
-
-import Image from 'next/image'
-import Blog from './components/Blog'
-
-export default function Home() {
-  return (
-    <Blog />
+ 
 
   )
 }
