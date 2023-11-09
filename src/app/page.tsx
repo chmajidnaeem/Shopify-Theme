@@ -4,6 +4,6 @@ import Blog2 from './components/Blog2'
 
 export default function Home() {
   return (
-    <Blog2 />
+    <Blog />
   )
 }
