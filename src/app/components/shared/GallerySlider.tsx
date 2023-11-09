@@ -35,43 +35,42 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-20">
-            <Image src={BLOG1} alt="blog" />            
+          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-10 lg:mt-20">
+            <Image src={BLOG1} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG2} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG3} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG4} alt="blog" />
-            
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG5} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG6} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG7} alt="blog" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 lg:mt-20">
             <Image src={BLOG8} alt="blog" />
           </div>
         </SwiperSlide>

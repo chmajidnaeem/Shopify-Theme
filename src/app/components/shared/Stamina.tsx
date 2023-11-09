@@ -5,19 +5,19 @@ import { BiCheck } from "react-icons/bi";
 
 const Stamina = () => {
   return (
-    <div className="h-[650px] bg-black text-[#FFF]">
+    <div className=" bg-black text-[#FFF] overflow-hidden">
       <Wrapper>
         <div className="lg:flex">
           <Image src={Imgst} alt="img" className="w-[500px] h-[600px] p-10" />
 
-          <div className="p-20">
-            <h1 className="font-bold text-[48px]">BODIES OF STEMINA STRENGH</h1>
-            <p className="text-[16px] font-[Heebo] w-[120%] leading-10">
+          <div className="p-16 mx-auto">
+            <h1 className="font-bold text-2xl lg:text-[32px]">BODIES OF STEMINA STRENGH</h1>
+            <p className=" text-[16px] font-[Heebo] w-[120%] leading-10">
               It is a long established fact that a reader will be distracted by
               the readable content
             </p>
             <p className="text-[16px] font-[Heebo]">of a page when looking at its page when at its layout</p>
-            <p className="text-[16px] font-[Heebo] mt-5 leading-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</p>
+            <p className="text-[16px] font-[Heebo]  mt-5 leading-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</p>
             <div className="flex gap-3 items-center mt-8">
                 <BiCheck className="text-green"/>
                 <p className="text-[18px] font-[Heebo]">HELP REDUCE STRESS, STRESS BODY BALANCE</p>

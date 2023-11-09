@@ -4,7 +4,7 @@ import Wrapper from "../shared/Wrapper"
 const TableChart = () => {
   return (
     <Wrapper>
-        <p className="xl:w-[850px] mx-auto text-center text-[32px] lg:text-[56px] font-bold pt-20">FIND THE CLASS THAT SUITS YOU</p>
+        <p className="xl:w-[850px] mx-auto text-center text-[32px] lg:text-[56px] font-bold pt-10 lg:pt-20">FIND THE CLASS THAT SUITS YOU</p>
         <p className="mx-auto text-center lg:w-[795px] leading-10">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. the readable content of a page when looking at its layout.
@@ -21,7 +21,7 @@ const TableChart = () => {
           </div>
         </div>
 
-        <div className='mt-32 mx-2 invisible xl:visible'>
+        <div className='lg:mt-32 mx-2 '>
             <table>
                 <thead>
                     <tr>

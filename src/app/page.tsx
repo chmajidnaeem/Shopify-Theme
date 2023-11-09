@@ -17,25 +17,27 @@ import ClientQuot from "./components/widgets/ClientQuot"
 
 export default function Home() {
   return (
-    <>
-    <Navbar/>
-    <Hero/>
-    <Slider/>
+    <div >
+    
+    <Navbar />
+    
+    {/* <Hero/> */}
+    {/* <Slider/> */}
     <Collection/>
     <Logo/>
     <Stamina/>
-    <Slider/>
+    {/* <Slider/> */}
     <Choose/>
     <Gallery/>
-    <Slider/>
+    {/* <Slider/> */}
     <TableChart/>
-    <Video/>
-    <Slider/>
+    {/* <Video/> */}
+    {/* <Slider/> */}
     <BMI/>
     <ClientQuot/>
     <Blog/>
 
-    {/* <VideoUpload/> */}
-    </>
+
+    </div>
   )
 }
