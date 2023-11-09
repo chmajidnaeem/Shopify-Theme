@@ -20,7 +20,7 @@ const Navbar = () => {
     
     <Wrapper>
     <div className="relative">
-      <div className="fixed top-0 left-0 right-0  bg-white">
+      <div className=" top-0 left-0 right-0  bg-white">
         <div
           className={`sm:flex justify-between items-center p-6 ${
             togglePage ? `flex` : `hidden`
@@ -83,7 +83,7 @@ const Navbar = () => {
 
                 <li className="mt-4">Workout Tops</li>
                 <li>Track Pants</li>
-                <li>Sports Bra</li>
+               
                 <li>Yoga Pants</li>
                 <li>High Rise Tights</li>
                 <li>Stretchable Wear</li>
@@ -104,3 +104,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
