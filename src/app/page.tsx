@@ -1,3 +1,4 @@
+
 "use client"
 
 import Navbar from "./components/layout/Navbar"
@@ -17,27 +18,26 @@ import ClientQuot from "./components/widgets/ClientQuot"
 
 export default function Home() {
   return (
-    <div >
-    
+   <>
     <Navbar />
     
-    {/* <Hero/> */}
-    {/* <Slider/> */}
+    <Hero/>
+    <Slider/>
     <Collection/>
     <Logo/>
     <Stamina/>
-    {/* <Slider/> */}
+    <Slider/>
     <Choose/>
     <Gallery/>
-    {/* <Slider/> */}
+    <Slider/>
     <TableChart/>
-    {/* <Video/> */}
-    {/* <Slider/> */}
+    <Video/>
+    <Slider/>
     <BMI/>
     <ClientQuot/>
     <Blog/>
+    </>
+ 
 
-
-    </div>
   )
 }
