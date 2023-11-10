@@ -65,9 +65,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="absolute ">
+            <div className="absolute">
               {toggle && (
-                <div className="bg-slate-300 md:w-[90%] md:flex gap-10 relative z-10 ml-96 md:mx-20 mt-12 md:mt-0 pt-3 border-y-2  border-green bg-white px-5 pb-5">
+                <div className="bg-slate-300 md:w-[90%] md:flex gap-10 relative z-10 ml-[390px] md:mx-20 mt-12 md:mt-0 pt-3 border-y-2  border-green bg-white px-5 pb-5">
                   <div>
                     <h1 className="font-bold underline underline-offset-8 decoration-green">
                       Equipments
