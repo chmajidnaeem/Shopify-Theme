@@ -69,7 +69,7 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className=" invisible lg:visible">
+        <div className="">
             <Image src={Symbol} alt="symbol" className="w-14 mx-auto mt-16" />
             <p className="mx-auto  lg:w-[1000px] leading-8 text-center mt-10">
               There are many variations of passages of Lorem Ipsum available,

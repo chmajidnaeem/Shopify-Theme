@@ -1,6 +1,4 @@
-
 "use client"
-
 import Navbar from "./components/layout/Navbar"
 import BMI from "./components/shared/BMI"
 import Choose from "./components/shared/Choose"
@@ -18,8 +16,7 @@ import ClientQuot from "./components/widgets/ClientQuot"
 
 export default function Home() {
   return (
-   <>
-    <Navbar />
+   <div className="">
     
     <Hero/>
     <Slider/>
@@ -31,12 +28,12 @@ export default function Home() {
     <Gallery/>
     <Slider/>
     <TableChart/>
-    <Video/>
+    {/* <Video/>  */}
     <Slider/>
     <BMI/>
     <ClientQuot/>
     <Blog/>
-    </>
+    </div>
  
 
   )

@@ -4,9 +4,9 @@ import Wrapper from "../shared/Wrapper";
 const BMI = () => {
   return (
     <Wrapper>
-      <div className="xl:flex bg-[#FFFFFF] gap-6 mt-32">
+      <div className="xl:flex bg-[#FFF] gap-6 mt-32">
         {/* Left side */}
-        <div className="w-[90%] xl:w-[50%]">
+        <div className="w-[90%]  xl:w-[50%]">
           <p className="text-lg lg:text-[56px] font-bold uppercase">
             What is BMI.
           </p>
@@ -91,7 +91,7 @@ const BMI = () => {
           </div>
         </div>
       </div>
-    </Wrapper>
+      </Wrapper>
   );
 };
 

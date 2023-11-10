@@ -32,10 +32,10 @@ export default function App() {
           clickable: true,
         }}
         modules={[FreeMode, Pagination]}
-        className="mySwiper"
+        className="mySwiper "
       >
         <SwiperSlide>
-          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-20">
+          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-20 ">
             <Image src={BLOG1} alt="blog" />
             <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Acrobatics</p>
             <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">

@@ -11,7 +11,7 @@ const Logo = () => {
         <hr />
       </div>
       <Wrapper>
-        <div className="grid grid-cols-5 my-10 bg-green">
+        <div className="grid grid-cols-5 my-10">
           <Image src={LOGO1} alt="img" className="w-60" />
           <Image src={LOGO2} alt="img" className="w-60" />
           <Image src={LOGO1} alt="img" className="w-60" />
