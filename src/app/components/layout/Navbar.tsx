@@ -117,7 +117,7 @@ const Navbar = () => {
 
             {/* ----------Overly Start here--------- */}
             {!togle && (
-              <div className="fixed top-0 left-0 bg-[#EEE] h-screen w-full">
+              <div className="fixed top-0 left-0 bg-[#EEE] h-screen sm:w-full lg:invisible">
                 <div>
                   <Image
                     src={Logo}
