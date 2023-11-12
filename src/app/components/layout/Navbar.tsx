@@ -11,10 +11,46 @@ import Banner3 from "/public/images/megabanner_3.jpg";
 import { useState } from "react";
 import Wrapper from "../shared/Wrapper";
 import { RxCross2 } from "react-icons/rx";
+import Link from 'next/link'
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [togle, setTogle] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const pathname = usePathname();
+
+  const EquipmentsLinks = [
+    {
+      id: 1,
+      slug: 'threadmill',
+      title: 'Threadmill'
+    },
+    {
+      id: 2,
+      slug: 'dumbbell',
+      title: 'Dumbbell'
+    }, {
+      id: 3,
+      slug: 'bench',
+      title: 'Bench'
+    },
+    {
+      id: 4,
+      slug: 'fitness_ball',
+      title: 'Fitness Ball'
+    },
+    {
+      id: 5,
+      slug: 'mini_hip_band',
+      title: 'Mini Hip Band'
+    },
+    {
+      id: 6,
+      slug: 'kettlebell',
+      title: 'Kettlebell'
+    }
+    // Add more posts as needed...
+  ];
   return (
     <>
       <Wrapper>
@@ -72,12 +108,11 @@ const Navbar = () => {
                     <h1 className="font-bold underline underline-offset-8 decoration-green">
                       Equipments
                     </h1>
-                    <li className="mt-4">Threadmill</li>
-                    <li>Dumbbell</li>
-                    <li>Bench</li>
-                    <li>Fitness Ball</li>
-                    <li>Mini Hip Band</li>
-                    <li>Kettlebell</li>
+                    {EquipmentsLinks.map((link) => (
+                      <li key={link.id}>
+                        <Link className={`link ${pathname === '/' ? 'active' : ''}`} href={`/category/${link.slug}`}>{link.title}</Link>
+                      </li>
+                    ))}
                   </div>
                   <div>
                     <h1 className="font-bold underline underline-offset-8 decoration-green">
@@ -150,7 +185,7 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-            ) }
+            )}
             {/* ----------Overly End here--------- */}
           </div>
         </div>
