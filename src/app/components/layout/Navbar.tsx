@@ -28,7 +28,8 @@ const Navbar = () => {
     {
       id: 2,
       slug: 'dumbbell',
-      title: 'Dumbbell'
+      title: 'Dumbbell',
+      Link:'/product'
     }, {
       id: 3,
       slug: 'bench',
@@ -62,7 +63,7 @@ const Navbar = () => {
               </div>
               <div className="invisible md:visible md:flex hidden font-semibold text-lg justify-between uppercase gap-5 relative">
                 <div>
-                  <p className="hover:text-green">Home</p>
+                <Link href="/"className="hover:text-green">Home</Link>
                 </div>
                 <div className="flex justify-center hover:z-50 group hover:text-green">
                   <p>Shop</p>
@@ -77,11 +78,11 @@ const Navbar = () => {
                   </span>
                 </div>
                 <div>
-                  <p className="hover:text-green">About</p>
+              <Link href={"/Blog"} className="hover:text-green">Blog</Link>
                 </div>
 
                 <div>
-                  <p className="hover:text-green">Contact</p>
+                                   <Link href={"/Contactus"} className="hover:text-green">Contact</Link>
                 </div>
               </div>
 
@@ -177,11 +178,11 @@ const Navbar = () => {
                     </span>
                   </div>
                   <div>
-                    <p className="hover:text-green">About</p>
+                  <Link href={"/Blog"} className="hover:text-green">Blog</Link>
                   </div>
 
                   <div>
-                    <p className="hover:text-green">Contact</p>
+                  <Link href={"/Contactus"} className="hover:text-green">Contact</Link>
                   </div>
                 </div>
               </div>
@@ -195,3 +196,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
