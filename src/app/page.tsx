@@ -1,3 +1,11 @@
+
+import ContactUs from "./Contactus/page"
+
+
+export default function Home(){
+  return(
+    <ContactUs />
+
 "use client"
 import Image from 'next/image'
 import Blog from './components/Blog'
@@ -41,6 +49,7 @@ export default function Home() {
     <Blog/>
     </div>
  
+
 
   )
 }
