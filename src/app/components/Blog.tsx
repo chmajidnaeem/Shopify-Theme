@@ -8,6 +8,7 @@ import ImageCarousel from "./Slider";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { GoCommentDiscussion } from "react-icons/go";
+import { FaGreaterThan } from "react-icons/fa6";
 
 const Blog = () => {
   return (
@@ -15,20 +16,29 @@ const Blog = () => {
       {/* image section  */}
       <div className="">
         <div className="relative">
-          <Image width={1370} src={BlogCp} alt="cp" className="mx-auto h-72" />
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[90px] font-bold text-white">
+          <Image
+            src={BlogCp}
+            alt="cp"
+            className="mx-auto md:h-72 h-[179px] md:w-[1370px] w-[375px]"
+          />
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-[90px] text-4xl font-bold text-white">
             News
           </h1>
         </div>
-        <div className="text-white text-xl flex items-center justify-center absolute top-48 font-bold left-[615px]">
-          <Link href="/">Home</Link>
-          <span className="mx-2"> t </span>
+        <div className="text-white text-xl flex items-center justify-center absolute md:top-48 top-28 font-bold md:left-[615px] left-[110px] ">
+          <Link href="/" className="hover:text-green duration-700">
+            Home
+          </Link>
+          <span className="mx-2 ">
+            {" "}
+            <FaGreaterThan />{" "}
+          </span>
           <Link href="/">News</Link>
         </div>
       </div>
-      <div className="flex mt-44">
+      <div className="md:flex md:mt-28 px-3 md:px-0">
         {/* left side  */}
-        <div className="w-[500px] pl-12 ">
+        <div className="w-full md:w-[500px] pl-12 md:block hidden">
           <div>
             <div className="w-[300px] h-[60px] bg-gray flex justify-start items-center border-l-green mt-16 border-4 border-gray">
               <h4 className="text-xl font-bold pl-6">Tags</h4>
@@ -87,22 +97,26 @@ const Blog = () => {
             <div className="flex justify-start mt-8">
               <Image width={112} src={Blog201} alt="cp" className="h-[112px]" />
               <div className="pl-5 mt-8">
-                <p className="text-xl font-medium hover:text-green">High Wasit Yoga Pants</p>
+                <p className="text-xl font-medium hover:text-green">
+                  High Wasit Yoga Pants
+                </p>
                 <p className="text-green text-xl">$35.00</p>
               </div>
             </div>
             <div className="flex justify-start mt-8">
               <Image width={112} src={Blog201} alt="cp" className="h-[112px]" />
               <div className="pl-5 mt-8">
-                <p className="text-xl font-medium hover:text-green">Sports Wear Set for Women</p>
+                <p className="text-xl font-medium hover:text-green">
+                  Sports Wear Set for Women
+                </p>
                 <p className="text-green text-xl">$35.00</p>
               </div>
             </div>
           </div>
         </div>
         {/* right side  */}
-        <div className="w-[1130px] mt-16">
-          <div className="grid grid-cols-2 gap-y-24 ">
+        <div className="md:w-[1130px] w-full mt-16">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-y-24 ">
             <div>
               <div className="relative">
                 <Image
@@ -115,7 +129,7 @@ const Blog = () => {
                   <FaRegCalendarAlt />
                   <p className="font-medium">July 20</p>
                 </div>
-                <div className="flex space-x-4 mt-8 justify-center pr-10">
+                <div className="flex space-x-4 mt-8 justify-center md:pr-10">
                   <span className="mt-1.5 pr-2">
                     <IoPersonCircleOutline />
                   </span>
@@ -125,15 +139,15 @@ const Blog = () => {
                   </span>
                   1 Comment
                 </div>
-                <p className="text-3xl font-bold text-center pr-10 hover:text-green mt-4">
+                <p className="text-3xl font-bold text-center md:pr-10 hover:text-green mt-4">
                   Make yourself more define
                 </p>
-                <p className="text-center text-green pr-10 mt-4">
+                <p className="text-center text-text-gray md:pr-10 mt-4">
                   Rhoncus aenean feugiat ut eros et nisl sagittis vestibulum.
                   Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet
                   feugiat, pede....
                 </p>
-                <div className="text-xl underline-offset-2 underline hover:text-green text-center pr-10 mt-4">
+                <div className="text-xl underline-offset-2 underline hover:text-green text-center md:pr-10 mt-4">
                   READ MORE
                 </div>
               </div>
@@ -151,7 +165,7 @@ const Blog = () => {
                   <FaRegCalendarAlt />
                   <p className="font-medium">July 20</p>
                 </div>
-                <div className="flex space-x-4 mt-8 justify-center pr-10">
+                <div className="flex space-x-4 mt-8 justify-center md:pr-10">
                   <span className="mt-1.5 pr-2">
                     <IoPersonCircleOutline />
                   </span>
@@ -161,15 +175,15 @@ const Blog = () => {
                   </span>
                   1 Comment
                 </div>
-                <p className="text-3xl font-bold text-center pr-10 hover:text-green mt-4">
+                <p className="text-3xl font-bold text-center md:pr-10 hover:text-green mt-4">
                   Make yourself more define
                 </p>
-                <p className="text-center text-green pr-10 mt-4">
+                <p className="text-center text-text-gray md:pr-10 mt-4">
                   Rhoncus aenean feugiat ut eros et nisl sagittis vestibulum.
                   Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet
                   feugiat, pede....
                 </p>
-                <div className="text-xl underline-offset-2 underline hover:text-green text-center pr-10 mt-4">
+                <div className="text-xl underline-offset-2 underline hover:text-green text-center md:pr-10 mt-4">
                   READ MORE
                 </div>
               </div>
@@ -187,7 +201,7 @@ const Blog = () => {
                   <FaRegCalendarAlt />
                   <p className="font-medium">July 20</p>
                 </div>
-                <div className="flex space-x-4 mt-8 justify-center pr-10">
+                <div className="flex space-x-4 mt-8 justify-center md:pr-10">
                   <span className="mt-1.5 pr-2">
                     <IoPersonCircleOutline />
                   </span>
@@ -197,15 +211,15 @@ const Blog = () => {
                   </span>
                   1 Comment
                 </div>
-                <p className="text-3xl font-bold text-center pr-10 hover:text-green mt-4">
+                <p className="text-3xl font-bold text-center md:pr-10 hover:text-green mt-4">
                   Make yourself more define
                 </p>
-                <p className="text-center text-green pr-10 mt-4">
+                <p className="text-center text-text-gray md:pr-10 mt-4">
                   Rhoncus aenean feugiat ut eros et nisl sagittis vestibulum.
                   Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet
                   feugiat, pede....
                 </p>
-                <div className="text-xl underline-offset-2 underline hover:text-green text-center pr-10 mt-4">
+                <div className="text-xl underline-offset-2 underline hover:text-green text-center md:pr-10 mt-4">
                   READ MORE
                 </div>
               </div>
@@ -223,7 +237,7 @@ const Blog = () => {
                   <FaRegCalendarAlt />
                   <p className="font-medium">July 20</p>
                 </div>
-                <div className="flex space-x-4 mt-8 justify-center pr-10">
+                <div className="flex space-x-4 mt-8 justify-center md:pr-10">
                   <span className="mt-1.5 pr-2">
                     <IoPersonCircleOutline />
                   </span>
@@ -233,15 +247,15 @@ const Blog = () => {
                   </span>
                   1 Comment
                 </div>
-                <p className="text-3xl font-bold text-center pr-10 hover:text-green mt-4">
+                <p className="text-3xl font-bold text-center md:pr-10 hover:text-green mt-4">
                   Make yourself more define
                 </p>
-                <p className="text-center text-green pr-10 mt-4">
+                <p className="text-center text-text-gray md:pr-10 mt-4">
                   Rhoncus aenean feugiat ut eros et nisl sagittis vestibulum.
                   Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet
                   feugiat, pede....
                 </p>
-                <div className="text-xl underline-offset-2 underline hover:text-green text-center pr-10 mt-4">
+                <div className="text-xl underline-offset-2 underline hover:text-green text-center md:pr-10 mt-4">
                   READ MORE
                 </div>
               </div>
