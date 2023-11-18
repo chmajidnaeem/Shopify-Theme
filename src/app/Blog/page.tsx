@@ -2,12 +2,13 @@ import React from "react";
 import Image from "next/image";
 import BlogCp from "../../../public/blog.jpeg";
 import Blg2 from "../../../public/blog2.jpg";
-import Blog201 from "../../../public/blog201.webp";
+// import Blog201 from "../../../public/blog201.webp";
 import Link1 from "../../../public/Link → 1.jpg.png";
 import Link2 from "../../../public/Link → 2.jpg.png";
 import One from "../../../public/1.jpg.png";
 import Two from "../../../public/2.jpg.png";
 import Link3 from "../../../public/Link → 2.jpg.png";
+import CoverP from "../../../public/BlogCp.jpg";
 import Link from "next/link";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaGreaterThan } from "react-icons/fa6";
@@ -21,22 +22,24 @@ const Blog2 = () => {
       <div className="">
         <div className="relative">
           <Image
-            src={BlogCp}
+            src={CoverP}
             alt="cover photo"
-            className="mx-auto md:h-72 h-[189px] md:w-full w-full"
+            className="mx-auto md:h-[500px] h-[189px] md:w-full w-full"
           />
           <h1 className="absolute md:top-1/2 top-28 md:left-40 left-8 md:text-5xl text-base font-['Heebo'] font-bold tracking-[1] md:leading-[60px] uppercase text-white ">
             Common Workout Mistakes To Avoid
           </h1>
         </div>
-        <div className="text-white text-xl flex items-center justify-center absolute md:top-48 top-28 font-bold md:left-[170px] left-[40px] mt-6">
-          <GiHouse fontSize="1.5em" />
+        <div className="text-white text-xl flex items-center justify-center absolute md:top-72 top-28 font-bold md:left-[170px] left-[40px] mt-6">
+          <div className="hover:duration-700 hover:text-green flex">
+          <GiHouse fontSize="1.3em"  />
           <Link
             href="/"
             className="hover:text-green duration-700 pl-2 font-['Heebo'] md:leading-[32px] text-white text-sm md:text-xl"
           >
             Home
           </Link>
+          </div>
           <div className="bg-[#c1e502] md:w-2 w-2 md:h-2 h-1 rounded-full mx-4 mt-2" />
           <div className="font-['Heebo'] md:leading-[32px] text-green md:text-xl text-sm w-full duration-700">
             Common Workout Mistakes To Avoid
@@ -50,7 +53,7 @@ const Blog2 = () => {
             <Image
               src={Blg2}
               alt="cp"
-              className="mx-auto md:h-[478px] h-[200px] md:w-[880px] w-[403px]"
+              className="mx-auto md:h-[478px] h-[200px] md:w-full w-full"
             />
             <div className="bg-black w-36 pl-2 h-10 flex items-center justify-center absolute md:top-[450px] top-[180px] md:left-[190px] left-[40px] ">
               <p className="font-['Heebo'] font-medium tracking-[1] leading-[32px] uppercase text-white w-5/6 mt-1 mb-0 absolute">
@@ -169,21 +172,21 @@ const Blog2 = () => {
                   type="text"
                   id="myInput"
                   placeholder="* Enter Name"
-                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
+                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray hover:duration-700"
                 />
 
                 <input
                   type="text"
                   id="myInput"
                   placeholder="* Enter Email"
-                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
+                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray hover:duration-700"
                 />
 
                 <input
                   type="text"
                   id="myInput"
                   placeholder="* Enter URL"
-                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
+                  className="font-['Heebo'] bg-gray h-12 px-5 hover:border-green border outline-none border-gray hover:duration-700"
                 />
               </div>
               <div className="mt-7 relative w-full ">
@@ -191,13 +194,12 @@ const Blog2 = () => {
                   type="text"
                   id="commentInput"
                   placeholder="Enter Your Comment"
-                  className="font-['Heebo'] bg-gray w-full px-7 hover:border-green border outline-none border-gray py-2 h-56"
+                  className="font-['Heebo'] bg-gray w-full px-7 hover:border-green border outline-none border-gray py-2 h-56 hover:duration-700"
                 />
               </div>
               <button
                 className="bg-green text-black
-           text-lg w-52 h-14 mt-10 hover:text-white hover:bg-black font-['Heebo'] font-medium tracking-[1] leading-[32px] uppercase
-            "
+           text-lg w-52 h-14 mt-10 hover:text-white hover:bg-black font-['Heebo'] font-medium tracking-[1] leading-[32px] uppercase hover:duration-700"
               >
                 POST COMMENT
               </button>
@@ -207,13 +209,15 @@ const Blog2 = () => {
           {/* ////////////////////// */}
           {/* right side  */}
           <div className="md:w-[570px] w-full md:pr-10 px-3 mt-14 md:mt-0 md:px-0 bg-white  ">
-            <div className="bg-[#eeeeee] relative flex flex-row justify-end w-full items-start p-5 px-12">
-              <div className="border-solid border-white w-5/6 h-12 bg-white absolute top-8 left-8 flex flex-row justify-end items-start border">
+            <div className="bg-[#eeeeee] relative flex flex-row justify-end w-full items-start p-5 px-12 ">
+              <div className="border-solid border-white w-5/6 h-12 bg-white absolute top-8 left-8 flex flex-row justify-end items-start border hover:border-green  ">
                 <button className="bg-[#1d1d1d] w-12 h-12 cursor-pointer" />
               </div>
-              <div className="font-['Heebo'] text-[#757575] absolute top-12 left-12 h-12 w-1/6">
-                Search...
-              </div>
+              <input
+                type="text"
+                className="font-['Heebo'] text-[#757575] absolute top-12 left-12  w-1/6 outline-none "
+                placeholder="Search ..."
+              />
               <div className="text-center text-xl font-['Inter'] tracking-[1] leading-[54px] uppercase text-white relative w-1/6 mt-6 mb-3 pl-6">
                 <AiOutlineSearch color="white" fontSize="1.4em" />
               </div>
@@ -225,7 +229,7 @@ const Blog2 = () => {
               </h4>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -234,7 +238,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -243,7 +247,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -252,7 +256,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -261,7 +265,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -270,7 +274,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2 text-xl text-text-gray font-['Heebo'] ">
@@ -290,7 +294,7 @@ const Blog2 = () => {
                     className="md:h-[90px] md:w-[90px] h-[120px] w-[110px] "
                   />
                   <div className="pl-5 ">
-                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] ">
+                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] hover:text-green hover:duration-700">
                       WORKOUT WITH GET SIX-PACK ABS ‘MAGIC MIKE
                     </p>
                     <p className="font-thin mt-2 text-text-gray text-sm font-['Heebo'] leading-[22px]">
@@ -306,7 +310,7 @@ const Blog2 = () => {
                     className="md:h-[90px] md:w-[90px] h-[120px] w-[110px] "
                   />
                   <div className="pl-5 ">
-                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] ">
+                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] hover:text-green hover:duration-700">
                       WORKOUT WITH GET SIX-PACK ABS ‘MAGIC MIKE
                     </p>
                     <p className="font-thin mt-2 text-text-gray text-sm font-['Heebo'] leading-[22px]">
@@ -322,7 +326,7 @@ const Blog2 = () => {
                     className="md:h-[90px] md:w-[90px] h-[120px] w-[110px] "
                   />
                   <div className="pl-5 ">
-                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] ">
+                    <p className="font-['Heebo'] font-bold tracking-[1] leading-[24px] uppercase text-[#1d1d1d] hover:text-green hover:duration-700">
                       WORKOUT WITH GET SIX-PACK ABS ‘MAGIC MIKE
                     </p>
                     <p className="font-thin mt-2 text-text-gray text-sm font-['Heebo'] leading-[22px]">
@@ -340,7 +344,7 @@ const Blog2 = () => {
 
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2  font-['Heebo'] leading-[32px] text-black/60 w-full text-text-gray text-xl">
@@ -349,7 +353,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2  font-['Heebo'] leading-[32px] text-black/60 w-full text-text-gray text-xl">
@@ -358,7 +362,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2  font-['Heebo'] leading-[32px] text-black/60 w-full text-text-gray text-xl">
@@ -367,7 +371,7 @@ const Blog2 = () => {
               </div>
               <div className="flex items-center mt-8">
                 <FaGreaterThan
-                  className="text-black text-1.7em transform hover:scale-125 transition-transform"
+                  className=" text-1.7em transform hover:translate-x-1 text-text-gray"
                   fontSize="0.8em"
                 />
                 <p className="ml-2  font-['Heebo'] leading-[32px] text-black/60 w-full text-text-gray text-xl">
@@ -381,25 +385,25 @@ const Blog2 = () => {
                 TAGS
               </h4>
               <div className="grid md:grid-cols-4 grid-cols-3 mt-4 gap-5">
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Fitness
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Gym
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Sport
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Success
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Wild
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Yoga
                 </button>
-                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border">
+                <button className="bg-white p-2 font-extralight text-sm hover:bg-green font-['Heebo'] leading-[22px] text-[#1d1d1d] border-solid border-white flex flex-row w-16 h-8 items-start pt-1 px-2 border hover:duration-700">
                   Fitness
                 </button>
               </div>
