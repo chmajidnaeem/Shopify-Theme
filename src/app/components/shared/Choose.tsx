@@ -8,7 +8,7 @@ import Img3 from "/public/images/ch3.jpg";
 const Choose = () => {
   return (
     <Wrapper>
-      <p className="text-center text-[32px] lg:text-5xl font-bold mt-14 uppercase text-black">
+      <p className="text-center text-[32px] lg:text-5xl font-bold mt-28 uppercase text-black">
         Why Choose Us
       </p>
       <p className="mx-auto text-center lg:w-[795px] leading-10">
