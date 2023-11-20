@@ -8,36 +8,65 @@ import Img3 from "/public/images/ch3.jpg"
 
 const Collection = () => {
   return (
-    <div className="w-[100%] sm:w-[80%] md:w-[100%] py-5">
+    <div className="">
       <Wrapper>
-        <p className="text-center text-[20px] lg:text-[56px] font-bold mt-10 lg:mt-20">
-          OUR Collection
-        </p>
+        <p className="text-center text-[20px] lg:text-[56px] font-bold mt-10 lg:mt-20 text-black uppercase">OUR Collection</p>
+        <p className="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. the readable content of a page when looking at its layout.</p>
 
-        <div className="mt-10 grid md:grid-cols-4 gap-5">
-          <div className="border border-green p-8">
-            <Image src={Img1} alt="img"/>
-            <p className="text-sm lg:text-xl font-semibold text-center my-3 lg:my-5 uppercase">
+        <div className="mt-10 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-5">
+          <div className="border border-green p-4">
+            <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+              <Image
+                src={Img1}
+                className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+                alt="Louvre" />
+            </div>
+            <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Sports Bag
             </p>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
           </div>
-          <div className=" my-5 md:my-0 border border-green p-8">
-            <Image src={Img2} alt="img" />
-            <p className="text-sm lg:text-xl font-semibold text-center  lg:my-5 uppercase">
+
+
+          <div className=" my-5 md:my-0 border border-green p-4">
+            <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+              <Image
+                src={Img2}
+                className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+                alt="Louvre" />
+            </div>
+            <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Running Shoes
             </p>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
           </div>
-          <div className="my-5 md:my-0 border border-green p-8">
-            <Image src={Img3} alt="img" />
-            <p className="text-sm lg:text-xl font-semibold text-center my-3 lg:my-5 uppercase">
+
+
+          <div className="my-5 md:my-0 border border-green p-4">
+            <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+              <Image
+                src={Img3}
+                className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+                alt="Louvre" />
+            </div>
+            <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Dumbbells
             </p>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
           </div>
-          <div className=" border border-green p-8">
-            <Image src={Img2} alt="img" />
-            <p className="text-sm lg:text-xl font-semibold text-center my-3 lg:my-5 uppercase">
+
+
+          <div className=" border border-green p-4">
+            <div className="relative max-w-xs overflow-hidden bg-cover bg-no-repeat">
+              <Image
+                src={Img2}
+                className="max-w-xs transition duration-300 ease-in-out hover:scale-110"
+                alt="Louvre" />
+            </div>
+            <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Yoga mat
             </p>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
           </div>
         </div>
       </Wrapper>
