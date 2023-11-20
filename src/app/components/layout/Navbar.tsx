@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div className="flex" onClick={() => {
                   setToggle(!toggle)
                 }}>
-                  <Link className="flex gap-2" href={'/'}>Shop
+                  <Link className="flex gap-2" href={'/products'}>Shop
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -144,14 +144,14 @@ const Navbar = () => {
                 </div>
               </div>
               <div className='my-5'>
-                <p className='w-[85%] md:w-[90%] py-4 text-3xl text-pink-600 font-bold'>Maria Fajruddin</p>
+                <p className='w-[85%] md:w-[90%] py-4 text-3xl text-pink-600 font-bold'></p>
               </div>
               <div className='py-4'>
                 <ul className='text-lg flex flex-col'>
                   <Link className='py-4' href={'/'}>Home</Link>
-                  <Link className='py-4' href={'https://resume-9nm2qjmwn-mariafajruddin-gmailcom.vercel.app/'}>About</Link>
-                  <Link className='py-4' href={'https://panaverse-website-o6a51awpc-mariafajruddin-gmailcom.vercel.app/'}>Courses</Link>
-                  <Link className='py-4' href={'https://resume-9nm2qjmwn-mariafajruddin-gmailcom.vercel.app/'}>Contact</Link>
+                  <Link className='py-4' href={'/products'}>Shop</Link>
+                  <Link className='py-4' href={'/Blog'}>Blog</Link>
+                  <Link className='py-4' href={'/Contactus'}>Contact</Link>
                 </ul>
               </div>
             </div>
