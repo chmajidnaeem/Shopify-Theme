@@ -211,7 +211,7 @@ export default function Home() {
                 <div className="flex" onClick={() => {
                   setToggle(!toggle)
                 }}>
-                  <Link className="flex gap-2" href={'/products'}>Shop
+                  <Link className="flex gap-2" href={'/'}>Shop
                     <svg
                       fill="none"
                       stroke="currentColor"
@@ -337,26 +337,15 @@ export default function Home() {
                   <Link href={"/Blog"} className="">Blog</Link>
                   <Link href={"/Contactus"} className="">Contact</Link>
                 </ul>
-                <div className='my-5'>
-                  <p className='w-[85%] md:w-[90%] py-4 text-3xl text-pink-600 font-bold'></p>
-                </div>
-                <div className='py-4'>
-                  <ul className='text-lg flex flex-col'>
-                    <Link className='py-4' href={'/'}>Home</Link>
-                    <Link className='py-4' href={'/products'}>Shop</Link>
-                    <Link className='py-4' href={'/Blog'}>Blog</Link>
-                    <Link className='py-4' href={'/Contactus'}>Contact</Link>
-                  </ul>
-                </div>
-                <div className='md:hidden align-center'>
-                  <form action="" className="relative w-max">
-                    <input type="search"
-                      className="peer cursor-pointer relative z-10 h-12 w-12 rounded-2xl border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#c1e502] focus:pl-16 focus:pr-4" />
-                    <svg xmlns="http://www.w3.org/2000/svg" className="font-bold absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#c1e502] peer-focus:stroke-[#c1e502]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
-                  </form>
-                </div>
+              </div>
+              <div className='md:hidden align-center'>
+                <form action="" className="relative w-max">
+                  <input type="search"
+                    className="peer cursor-pointer relative z-10 h-12 w-12 rounded-2xl border bg-transparent pl-12 outline-none focus:w-full focus:cursor-text focus:border-[#c1e502] focus:pl-16 focus:pr-4" />
+                  <svg xmlns="http://www.w3.org/2000/svg" className="font-bold absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-[#c1e502] peer-focus:stroke-[#c1e502]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </form>
               </div>
             </div>
           </div>
