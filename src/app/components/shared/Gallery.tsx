@@ -4,7 +4,7 @@ import GallerySlider from "../shared/GallerySlider";
 
 const Gallery = () => {
   return (
-    <div className="bg-[#EEEEEE] overflow-hidden mt-20 lg:mt-72">
+    <div className="bg-[#EEEEEE] overflow-hidden mt-20">
       <Wrapper>
         <p className="text-center text-[28px] lg:text-[56px] font-bold pt-20">
           VIEW OUR GALLERY

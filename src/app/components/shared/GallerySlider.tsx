@@ -25,8 +25,8 @@ export default function App() {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={2.5}
+        spaceBetween={20}
         freeMode={true}
         pagination={{
           clickable: true,
@@ -36,42 +36,42 @@ export default function App() {
       >
         <SwiperSlide>
           <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG1} alt="blog" />
+            <Image src={BLOG1} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG2} alt="blog" />
+            <Image src={BLOG2} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG3} alt="blog" />
+            <Image src={BLOG3} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG4} alt="blog" />
+            <Image src={BLOG4} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG5} alt="blog" />
+            <Image src={BLOG5} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG6} alt="blog" />
+            <Image src={BLOG6} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG7} alt="blog" />
+            <Image src={BLOG7} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="sm:uppercase mt-10 lg:mt-20">
-            <Image src={BLOG8} alt="blog" />
+            <Image src={BLOG8} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
       </Swiper>
