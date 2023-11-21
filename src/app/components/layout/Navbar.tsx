@@ -307,9 +307,9 @@ export default function Home() {
 
 
 
-          <div className={`${nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ''}`}>
-            <div className={`${nav ? 'fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-white p-10 ease-in duration-500' : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}`}>
-              <div className='flex w-full items-center justify-between'>
+          <div className={`${nav ? "md:hidden fixed  w-auto h-screen bg-black/70" : ''}`}>
+            <div className={`${nav ? 'fixed top-0 w-auto h-screen bg-white p-10 ease-in duration-500' : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'}`}>
+              <div className='flex w-full items-center justify-'>
                 <Link href={''}>
                   <Image className='' src={Logo} alt='' width={150} height={150}></Image>
                 </Link>
