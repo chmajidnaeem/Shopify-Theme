@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Wrapper from "../shared/Wrapper";
-import Imgst from "/public/images/st.jpg";
+import st2 from "/public/images/st2.png";
 import { BiCheck } from "react-icons/bi";
 
 const Stamina = () => {
@@ -8,10 +8,13 @@ const Stamina = () => {
     <div className=" bg-black text-[#FFF] overflow-hidden">
       <Wrapper>
         <div className="xl:flex lg:mx-20 mx-3">
-          <Image src={Imgst} alt="img" width={750} height={750} className="p-10" />
+          <Image src={st2} alt="img" width={750} height={750} className="p-10" />
 
           <div className="mx-auto mt-20">
-            <h1 className="font-bold text-2xl lg:text-5xl">BODIES OF STEMINA STRENGH</h1>
+            {/* <h1 className="font-bold text-2xl lg:text-5xl text-green p-10 text-center">BODIES OF STEMINA STRENGH</h1> */}
+            <p className=" text-bold leading-10 pt-3 text-green text-4xl">
+            BODIES OF STEMINA STRENGH
+            </p>
             <p className=" text-[16px] leading-10 pt-3">
               It is a long established fact that a reader will be distracted by
               the readable content

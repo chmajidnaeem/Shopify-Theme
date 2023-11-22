@@ -11,7 +11,7 @@ const Collection = () => {
     <div className="">
       <Wrapper>
         <p className="text-center text-3xl lg:text-[56px] font-bold mt-10 lg:mt-20 text-black uppercase">OUR Collection</p>
-        <p className="text-center">Lorem Ipsum is simply dummy text of the printing and typesetting industry. the readable content of a page when looking at its layout.</p>
+       
 
         <div className="mt-10 grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 gap-5">
           <div className="border border-green p-4">
@@ -24,7 +24,7 @@ const Collection = () => {
             <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Sports Bag
             </p>
-            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20 align-center content-center">Learn More</button>
           </div>
 
 

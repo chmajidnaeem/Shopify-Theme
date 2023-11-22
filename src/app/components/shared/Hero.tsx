@@ -23,9 +23,9 @@ import HeroSlider from "../shared/HeroSlider";
 import Image from "next/image";
 import BG from "/public/images/bg.png";
 import BlogSlider from "../shared/BlogSlider"
-import Main01 from '../../../../public/images/MAIN01.png'
-import Main02 from '../../../../public/images/MAIN02.png'
-import Main03 from '../../../../public/images/MAIN03.png'
+import mainnew from '../../../../public/images/mainnew.png'
+import worknew from '../../../../public/images/worknew.png'
+import girl from '../../../../public/images/girl.png'
 
 const Hero = () => {
   return (
@@ -34,21 +34,22 @@ const Hero = () => {
         <SwiperSlide>
           <div>
             <div className="h-screen flex  justify-center items-center pt-28">
-              <Image alt="equip" height={700} width={700} src={Main01} />
+              <Image alt="equip" height={800} width={800} src={mainnew} />
+              
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
             <div className="h-screen flex  justify-center items-center pt-36 pb-10">
-              <Image alt="equip" height={600} width={600} src={Main02} />
+              <Image alt="equip" height={600} width={600} src={worknew} />
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div>
             <div className="h-screen flex  justify-center items-center pt-24">
-              <Image alt="equip" height={700} width={700} src={Main03} />
+              <Image alt="equip" height={700} width={700} src={girl} />
             </div>
           </div>
         </SwiperSlide>

@@ -18,7 +18,7 @@ const Choose = () => {
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:mx-28">
         <div className="bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold uppercase">
+          <h1 className="text-center text-green mx-auto p-5 font-bold uppercase">
             Body balance
           </h1>
           <p className="text-center mx-auto  text-[16px] text-[#616161]">
@@ -32,7 +32,7 @@ const Choose = () => {
 
 
         <div className="my-5 md:my-0 bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold uppercase">
+          <h1 className="text-center text-green mx-auto p-5 text-[28px] font-bold uppercase">
             Self defence
           </h1>
           <p className="text-center mx-auto  text-[16px] text-[#616161]">
@@ -46,7 +46,7 @@ const Choose = () => {
 
 
         <div className="my-5 md:my-0 bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold font-[Heebo]">
+          <h1 className="text-center text-green mx-auto p-5 text-[28px] font-bold font-[Heebo]">
             BODY BALANCE
           </h1>
           <p className="text-center mx-auto  text-[16px] text-[#616161]">

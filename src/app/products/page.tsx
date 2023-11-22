@@ -9,7 +9,7 @@ import boy00 from '../../../public/BOY00.png'
 import { AiOutlineStar, AiFillStar, AiFillTwitterCircle } from 'react-icons/ai'
 import { BsFacebook, BsFillHandbagFill, BsPinterest } from 'react-icons/bs'
 
-export default function products() {
+export default function Products() {
     const [quantity, setQuantity] = useState(1);
     const [sources, setsources] = useState('description')
     const [imageSources, setImageSources] = useState(Pro01)

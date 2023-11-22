@@ -259,7 +259,7 @@ export default function Home() {
               <div className="bg-slate-300 md:w-[90%] md:flex gap-10 relative z-10 ml-96 md:mx-16 mt-12 md:mt-0 pt-3 border-y-2 border-green bg-white px-5 pb-5">
                 {/* FIRST ROW */}
                 <div className="ml-5">
-                  <h1 className="font-bold underline underline-offset-8 decoration-green text-xl pb-2">Equipments</h1>
+                  <h1 className="font-bold underline underline-offset-8 decoration-green text-xl pb-2 text-green">Equipments</h1>
                   {EquipmentsLinks.map((link: any) => (
                     <li key={link.id}>
                       <Link className={`link ${pathname === '/' ? 'active' : ''}`} href={`/category/${link.slug}`}>{link.title}</Link>
@@ -268,7 +268,7 @@ export default function Home() {
                 </div>
                 {/* SECOND ROW */}
                 <div>
-                  <h1 className="font-bold underline underline-offset-8 decoration-green text-xl">Workouts wear</h1>
+                  <h1 className="text-green font-bold underline underline-offset-8 decoration-green text-xl">Workouts wear</h1>
                   <li><Link href={''} className="pt-4">Workout Tops</Link></li>
                   <li><Link href={''} className="pt-4">Track Pants</Link></li>
                   <li><Link href={''} className="pt-4">Yoga Pants</Link></li>

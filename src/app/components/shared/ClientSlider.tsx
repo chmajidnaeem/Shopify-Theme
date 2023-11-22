@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import Image from "next/image";
-import Symbol from "/public/images/symbol.png";
+import Symbol from "../../../../public/images/Symbol.png"
 import JL from "/public/images/cl1.jpg";
 import AS from "/public/images/FT.jpg";
 import SA from "/public/images/YM.jpg"
