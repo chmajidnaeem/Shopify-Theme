@@ -8,7 +8,7 @@ import Img3 from "/public/images/ch3.jpg";
 const Choose = () => {
   return (
     <Wrapper>
-      <p className="text-center text-[32px] lg:text-[56px] font-bold mt-14 uppercase">
+      <p className="text-center text-[32px] lg:text-5xl font-bold mt-28 uppercase text-black">
         Why Choose Us
       </p>
       <p className="mx-auto text-center lg:w-[795px] leading-10">
@@ -16,39 +16,43 @@ const Choose = () => {
         industry. the readable content of a page when looking at its layout.
       </p>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div className=" p-8 bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold font-[Heebo] uppercase">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 xl:mx-28">
+        <div className="bg-[#EEE]">
+          <h1 className="text-center text-green mx-auto p-5 font-bold uppercase">
             Body balance
           </h1>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161]">
+          <p className="text-center mx-auto  text-[16px] text-[#616161]">
             It is a established fact that a reader will be
           </p>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161] mb-5">
+          <p className="text-center mx-auto  text-[16px] text-[#616161] mb-5">
             distracted distracted layout.
           </p>
           <Image src={Img1} alt="img" />
         </div>
-        <div className=" my-5 md:my-0  p-8 bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold font-[Heebo] uppercase">
+
+
+        <div className="my-5 md:my-0 bg-[#EEE]">
+          <h1 className="text-center text-green mx-auto p-5 text-[28px] font-bold uppercase">
             Self defence
           </h1>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161]">
+          <p className="text-center mx-auto  text-[16px] text-[#616161]">
             It is a established fact that a reader will be
           </p>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161] mb-5">
+          <p className="text-center mx-auto  text-[16px] text-[#616161] mb-5">
             distracted distracted layout.
           </p>
           <Image src={Img2} alt="img" />
         </div>
-        <div className="my-5 md:my-0  p-8 bg-[#EEE]">
-          <h1 className="text-center mx-auto p-5 text-[28px] font-bold font-[Heebo]">
+
+
+        <div className="my-5 md:my-0 bg-[#EEE]">
+          <h1 className="text-center text-green mx-auto p-5 text-[28px] font-bold font-[Heebo]">
             BODY BALANCE
           </h1>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161]">
+          <p className="text-center mx-auto  text-[16px] text-[#616161]">
             It is a established fact that a reader will be
           </p>
-          <p className="text-center mx-auto  text-[16px] font-[Heebo] text-[#616161] mb-5">
+          <p className="text-center mx-auto  text-[16px] text-[#616161] mb-5">
             distracted distracted layout.
           </p>
           <Image src={Img3} alt="img" />

@@ -1,4 +1,15 @@
+
+
+
+
+
+
 "use client"
+import Image from 'next/image'
+// import Blog from './components/Blog'
+import Blog2 from './components/Blog2'
+
+
 import Navbar from "./components/layout/Navbar"
 import BMI from "./components/shared/BMI"
 import Choose from "./components/shared/Choose"
@@ -13,6 +24,7 @@ import TableChart from "./components/shared/TableChart"
 import Video from "./components/shared/Video"
 import Blog from "./components/widgets/Blog"
 import ClientQuot from "./components/widgets/ClientQuot"
+
 
 export default function Home() {
   return (
@@ -35,6 +47,7 @@ export default function Home() {
     <Blog/>
     </div>
  
+
 
   )
 }

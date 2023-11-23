@@ -76,9 +76,9 @@ const Shop = () => {
                                 <li>lorem</li>
                             </ul>
                         </div>
+                        {/* <Image src="" alt="" />
                         <img src="" alt="" />
-                        <img src="" alt="" />
-                        <img src="" alt="" />
+                        <img src="" alt="" /> */}
                     </div>
                 }
             </div>
