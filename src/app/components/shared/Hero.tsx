@@ -1,47 +1,60 @@
+
+
+
+"use client";
+// import React, {useRef, useState} from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+// import required modules
+import { Navigation } from "swiper/modules";
+// import Image from "next/image";
+import Symbol from "/public/images/symbol.png";
+import JL from "/public/images/cl1.jpg";
+import AS from "/public/images/FT.jpg";
+import SA from "/public/images/YM.jpg"
+import CEO from "/public/images/CEO.jpg"
 import React from "react";
 import HeroSlider from "../shared/HeroSlider";
 import Image from "next/image";
 import BG from "/public/images/bg.png";
 import BlogSlider from "../shared/BlogSlider"
+import mainnew from '../../../../public/images/mainnew.png'
+import worknew from '../../../../public/images/worknew.png'
+import girl from '../../../../public/images/girl.png'
 
 const Hero = () => {
   return (
     <>
-      <div
-        className="bg-cover bg-center relative h-100 mt-20"
-        style={{ backgroundImage: 'url("/images/bg.png")' }}
-      >
-        
-        <div className="absolute z-0 inset-0 bg-black opacity-50">
-        
-        </div>
-       
-        <div className="relative z-0 h-screen flex flex-col justify-center items-center text-white">
-        <Image className="absolute" alt="equip" height={200} width={300}src="/images/WO.png" />
-        <Image className="relative object-right" alt="equip" height={200} width={240}src="/images/workout.png" />
-        
-        <h1 className="text-white text-9xl  flex items-center justify-center absolute font-extrabold">Workout</h1>
-       
-          <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg className="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span className="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg className="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span className="sr-only">Next</span>
-        </span>
-    </button>
-          {/* <HeroSlider /> */}
-          {/* <BlogSlider/> */}
-        </div>
-      </div>
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper bg-[url('/images/bg.png')] h-auto py-10">
+        <SwiperSlide>
+          <div>
+            <div className="h-screen flex  justify-center items-center pt-28">
+              <Image alt="equip" height={800} width={800} src={mainnew} />
+              
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            <div className="h-screen flex  justify-center items-center pt-36 pb-10">
+              <Image alt="equip" height={600} width={600} src={worknew} />
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div>
+            <div className="h-screen flex  justify-center items-center pt-24">
+              <Image alt="equip" height={700} width={700} src={girl} />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
     </>
   );
 };

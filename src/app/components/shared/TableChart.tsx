@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Wrapper from "../shared/Wrapper";
 
 const TableChart = () => {
+  const [source, setSource] = useState("AllEvents");
   return (
     <Wrapper>
-      <p className="xl:w-[850px] mx-auto text-center text-[32px] lg:text-[56px] font-bold pt-10 lg:pt-20">
+      <p className="xl:w-[900px] mx-auto text-center text-[32px] lg:text-[56px] font-extrabold pt-10 lg:pt-20 text-black">
         FIND THE CLASS THAT SUITS YOU
       </p>
       <p className="mx-auto text-center lg:w-[795px] leading-10">
@@ -12,316 +13,1295 @@ const TableChart = () => {
         industry. the readable content of a page when looking at its layout.
       </p>
       <div>
-        <div className="mx-auto flex lg:w-[795px] gap-2 invisible xl:visible">
-          <div className="text-sm justify-center items-center text-center bg-green w-[110px] py-3 mt-8 uppercase font-medium font-[Heebo] ">
+        <div className="lg:mx-10 grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-2 ">
+          <div
+            className={
+              source === "AllEvents"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("AllEvents")}
+          >
             All Events
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[150px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "KRUNCH-KORE"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("KRUNCH-KORE")}
+          >
             KRUNCH & KORE
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[100px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "CARDIO"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("CARDIO")}
+          >
             CARDIO
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[100px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "CROSSFIT"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("CROSSFIT")}
+          >
             CROSSFIT
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[100px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "OPEN-GYM"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("OPEN-GYM")}
+          >
             OPEN GYM
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[110px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "TOTAL-BODY"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("TOTAL-BODY")}
+          >
             TOTAL BODY
           </div>
-          <div className="text-sm justify-center items-center text-center bg-[#EEE] hover:bg-green w-[90px]  py-3 mt-8 px uppercase font-medium font-[Heebo]">
-            {" "}
+          <div
+            className={
+              source === "YOGA"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("YOGA")}
+          >
             YOGA
           </div>
         </div>
       </div>
 
-      <div className="lg:mt-32  mx-auto">
+      <div className="mt-5 lg:mx-20 justify-center 2xl:w-[1300px] overflow-hidden">
         <table>
-          <thead>
+          {/* DAYS */}
+          <thead className="style={{ overflowX: 'auto', maxWidth: '100%' }}">
             <tr>
-              <th className="mx-auto uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-2 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Monday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Tuesday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Wednesday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Thursday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Friday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Saturday
               </th>
-              <th className="uppercase bg-[#000] text-[#FFF] py-2 md:px-12">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4] truncate">
                 Sunday
               </th>
             </tr>
           </thead>
-          <tbody className="text-center">
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                3:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green col-span-1 row-span-2">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5  hover:bg-green">
-                OPEN GYM
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5  hover:bg-green">
-                OPEN GYM
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                4:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5  hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5  hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5  hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                6:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 col-span-1 row-span-2"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                OPEN GYM
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5  hover:bg-green"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                OPEN GYM
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                7:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 "></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                8:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 col-span-1 row-span-2"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                Cardio
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                11:00 am
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                CARDIO
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                TOTAL BODY
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                OPEN GYM
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                CROSSFIT
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                TOTAL BODY
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                yoga
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                12:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                1:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                CARDIO
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                OPEN GYM
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                2:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                3:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                CROSSFIT
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                yoga
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                4:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                5:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                yoga
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                6:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                7:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5"></td>
-              <td className="border border-[#EEE] text-[14px] font-bold py-5 hover:bg-green">
-                yoga
-              </td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                8:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-            <tr>
-              <td className="border border-[#EEE] text-[16px] font-normal py-5">
-                9:00 pm
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5 hover:bg-green">
-                KRUNCH & KORE
-              </td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-              <td className="border border-[#EEE] text-[14px]  py-5"></td>
-            </tr>
-          </tbody>
+          {source === "AllEvents" && (
+            <tbody className="text-center">
+              {/* COLUMN 01 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 02 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 03 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  6:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+              </tr>
+              {/* COLUMN 04 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  7:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4 "></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  8:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  Cardio
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 07 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  1:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 08 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  2:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 09 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 10 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 11 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  5:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+              </tr>
+              {/* COLUMN 12 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  6:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 13 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  7:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 14 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  8:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 15 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  9:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "KRUNCH-KORE" && (
+            <tbody className="text-center">
+              {/* COLUMN 01 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 02 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 07 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  1:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 08 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  2:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 14 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  8:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 15 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  9:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "CARDIO" && (
+            <tbody className="text-center">
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  8:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  Cardio
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 08 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  2:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 09 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "CROSSFIT" && (
+            <tbody className="text-center">
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 08 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  2:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 09 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 10 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "OPEN-GYM" && (
+            <tbody className="text-center">
+              {/* COLUMN 01 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 02 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 03 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  6:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+              </tr>
+              {/* COLUMN 04 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  7:00 am
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4 "></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 07 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  1:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 13 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  7:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "TOTAL-BODY" && (
+            <tbody className="text-center">
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 08 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  2:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 09 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+            </tbody>
+          )}
+
+          {source === "YOGA" && (
+            <tbody className="text-center">
+              {/* COLUMN 05 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  11:00 am
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
+              </tr>
+              {/* COLUMN 06 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  12:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 09 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  3:00 pm
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+              </tr>
+              {/* COLUMN 10 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  4:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+              {/* COLUMN 11 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  5:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+              </tr>
+              {/* COLUMN 12 */}
+              <tr>
+                <td className="border border-[#EEE] text-[16px] font-normal py-4">
+                  6:00 pm
+                </td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+                <td className="border border-[#EEE] text-[12px] py-4"></td>
+              </tr>
+            </tbody>
+          )}
         </table>
       </div>
     </Wrapper>

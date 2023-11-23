@@ -1,8 +1,8 @@
-import React, {FC} from 'react'
-const Wrapper: FC<{children: React.ReactNode}> = ({children}) => {
+import React, { FC } from 'react'
+const Wrapper: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <div className='max-w-[1920px] mx-[20px]'>
-        {children}
+      {children}
     </div>
   )
 }
