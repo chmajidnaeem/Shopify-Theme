@@ -24,7 +24,7 @@ const Collection = () => {
             <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Sports Bag
             </p>
-            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20 align-center content-center">Learn More</button>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-12 md:mx-20 align-center content-center">Learn More</button>
           </div>
 
 
@@ -38,7 +38,7 @@ const Collection = () => {
             <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Running Shoes
             </p>
-            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-12 md:mx-20">Learn More</button>
           </div>
 
 
@@ -52,7 +52,7 @@ const Collection = () => {
             <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Dumbbells
             </p>
-            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-12 md:mx-20">Learn More</button>
           </div>
 
 
@@ -66,7 +66,7 @@ const Collection = () => {
             <p className="lg:text-xl font-semibold text-center my-5 uppercase">
               Yoga mat
             </p>
-            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-20">Learn More</button>
+            <button className="text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform mx-12 md:mx-20">Learn More</button>
           </div>
         </div>
       </Wrapper>
