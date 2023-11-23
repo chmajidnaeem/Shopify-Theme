@@ -31,8 +31,8 @@ export default function Home() {
       <Gallery />
       <Slider />
       {/* <TableChart/> */}
-      <Video />
-      <Slider />
+      {/* <Video />
+      <Slider /> */}
       <BMI />
       <ClientQuot />
       <Blog />
