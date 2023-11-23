@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Wrapper from "../shared/Wrapper";
 
 const TableChart = () => {
-  const [source, setSource] = useState('AllEvents')
+  const [source, setSource] = useState("AllEvents");
   return (
     <Wrapper>
       <p className="xl:w-[900px] mx-auto text-center text-[32px] lg:text-[56px] font-extrabold pt-10 lg:pt-20 text-black">
@@ -14,32 +14,74 @@ const TableChart = () => {
       </p>
       <div>
         <div className="lg:mx-10 grid xl:grid-cols-7 lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-2 ">
-          <div className={source === 'AllEvents' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('AllEvents')}>
+          <div
+            className={
+              source === "AllEvents"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("AllEvents")}
+          >
             All Events
           </div>
-          <div className={source === 'KRUNCH-KORE' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('KRUNCH-KORE')}>
+          <div
+            className={
+              source === "KRUNCH-KORE"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("KRUNCH-KORE")}
+          >
             KRUNCH & KORE
           </div>
-          <div className={source === 'CARDIO' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('CARDIO')}>
+          <div
+            className={
+              source === "CARDIO"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("CARDIO")}
+          >
             CARDIO
           </div>
-          <div className={source === 'CROSSFIT' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('CROSSFIT')}>
+          <div
+            className={
+              source === "CROSSFIT"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("CROSSFIT")}
+          >
             CROSSFIT
           </div>
-          <div className={source === 'OPEN-GYM' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('OPEN-GYM')}>
+          <div
+            className={
+              source === "OPEN-GYM"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("OPEN-GYM")}
+          >
             OPEN GYM
           </div>
-          <div className={source === 'TOTAL-BODY' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('TOTAL-BODY')}>
+          <div
+            className={
+              source === "TOTAL-BODY"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("TOTAL-BODY")}
+          >
             TOTAL BODY
           </div>
-          <div className={source === 'YOGA' ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform" : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"}
-            onClick={() => setSource('YOGA')}>
+          <div
+            className={
+              source === "YOGA"
+                ? "cursor-pointer text-sm font-bold justify-center items-center text-center bg-green px-5 py-4 mt-8 uppercase font-medium duration-500 transform"
+                : "cursor-pointer text-sm font-bold justify-center items-center text-center bg-[#EEE] hover:bg-green duration-500 transform px-5 py-4 mt-8 px uppercase font-medium"
+            }
+            onClick={() => setSource("YOGA")}
+          >
             YOGA
           </div>
         </div>
@@ -48,44 +90,49 @@ const TableChart = () => {
       <div className="mt-5 lg:mx-20 justify-center 2xl:w-[1300px] overflow-hidden">
         <table>
           {/* DAYS */}
-          <thead>
+          <thead className="style={{ overflowX: 'auto', maxWidth: '100%' }}">
             <tr>
-              <th className="mx-auto uppercase bg-[#1d1d1d] text-[#FFF] py-2 lg:w-[300px]"></th>
-              <th className="mx-auto uppercase bg-[#1d1d1d] text-[#FFF] py-2 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-2 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Monday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Tuesday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Wednesday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Thursday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Friday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4]">
                 Saturday
               </th>
-              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[300px]">
+              <th className="uppercase bg-[#1d1d1d] text-[#FFF] py-4 lg:w-[1/7] md:w-[1/5] sm:w-[1/4] truncate">
                 Sunday
               </th>
             </tr>
           </thead>
-          {source === 'AllEvents' &&
+          {source === "AllEvents" && (
             <tbody className="text-center">
               {/* COLUMN 01 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
                   KRUNCH & KORE <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
                   OPEN GYM <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
@@ -118,7 +165,10 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
                   OPEN GYM <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
@@ -148,7 +198,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  Cardio<br />
+                  Cardio
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -161,40 +212,64 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -207,7 +282,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
+                  OPEN GYM
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -220,17 +296,26 @@ const TableChart = () => {
                   2:00 pm
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  CARDIO<br />
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  GRASSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -240,12 +325,20 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -274,8 +367,12 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
               </tr>
@@ -302,7 +399,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  yoga<br />
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -315,8 +413,12 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -335,31 +437,27 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'KRUNCH-KORE' &&
+          {source === "KRUNCH-KORE" && (
             <tbody className="text-center">
               {/* COLUMN 01 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
                   KRUNCH & KORE <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
                   OPEN GYM <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
@@ -388,8 +486,12 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -407,7 +509,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
+                  OPEN GYM
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -420,17 +523,26 @@ const TableChart = () => {
                   2:00 pm
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  CARDIO<br />
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  GRASSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -443,8 +555,12 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -461,21 +577,10 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'CARDIO' &&
+          {source === "CARDIO" && (
             <tbody className="text-center">
               {/* COLUMN 05 */}
               <tr>
@@ -485,7 +590,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 col-span-1 row-span-2"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  Cardio<br />
+                  Cardio
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -498,40 +604,64 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -542,17 +672,26 @@ const TableChart = () => {
                   2:00 pm
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  CARDIO<br />
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  GRASSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -562,80 +701,93 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'CROSSFIT' &&
+          {source === "CROSSFIT" && (
             <tbody className="text-center">
               {/* COLUMN 05 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -646,17 +798,26 @@ const TableChart = () => {
                   2:00 pm
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  CARDIO<br />
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  GRASSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -666,12 +827,20 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -688,40 +857,27 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'OPEN-GYM' &&
+          {source === "OPEN-GYM" && (
             <tbody className="text-center">
               {/* COLUMN 01 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform px-5 col-span-1 row-span-2"
+                  rowSpan={2}
+                >
                   KRUNCH & KORE <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4  hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
                   OPEN GYM <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
@@ -754,7 +910,10 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
                   OPEN GYM <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
@@ -781,40 +940,64 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -827,7 +1010,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
+                  OPEN GYM
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -845,72 +1029,79 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  yoga<br />
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'TOTAL-BODY' &&
+          {source === "TOTAL-BODY" && (
             <tbody className="text-center">
               {/* COLUMN 05 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -921,17 +1112,26 @@ const TableChart = () => {
                   2:00 pm
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  CARDIO<br />
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  GRASSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  GRASSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -941,78 +1141,93 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {source === 'YOGA' &&
+          {source === "YOGA" && (
             <tbody className="text-center">
               {/* COLUMN 05 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   11:00 am
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CARDIO<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CARDIO
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
-                  OPEN GYM<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  TOTAL BODY<br />
-                  <span className="font-medium pt-1">KRUNCH & KORE</span>
-                </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform">
+                  OPEN GYM
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  TOTAL BODY
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
+                  <span className="font-medium pt-1">KRUNCH & KORE</span>
+                </td>
+                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"></td>
               </tr>
               {/* COLUMN 06 */}
               <tr>
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   12:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={3}>
-                  KRUNCH & KORE<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={3}
+                >
+                  KRUNCH & KORE
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
@@ -1022,12 +1237,20 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[16px] font-normal py-4">
                   3:00 pm
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  CROSSFIT<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  CROSSFIT
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
@@ -1056,8 +1279,12 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
                 <td className="border border-[#EEE] text-[12px] font-bold py-4"></td>
-                <td className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform" rowSpan={2}>
-                  yoga<br />
+                <td
+                  className="border border-[#EEE] text-[12px] font-bold py-4 hover:bg-green duration-500 transform"
+                  rowSpan={2}
+                >
+                  yoga
+                  <br />
                   <span className="font-medium pt-1">KRUNCH & KORE</span>
                 </td>
               </tr>
@@ -1073,7 +1300,8 @@ const TableChart = () => {
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
                 <td className="border border-[#EEE] text-[12px] py-4"></td>
               </tr>
-            </tbody>}
+            </tbody>
+          )}
         </table>
       </div>
     </Wrapper>
