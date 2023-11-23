@@ -124,33 +124,12 @@ export default function Home() {
                 </div>
               )}
 
-
-            <div className="absolute">
-              {toggle && (
-                <div className="bg-slate-300 md:w-[90%] md:flex gap-10 relative z-10 ml-[390px] md:mx-20 mt-12 md:mt-0 pt-3 border-y-2  border-green bg-white px-5 pb-5">
-                  <div>
-                    <h1 className="font-bold underline underline-offset-8 decoration-green">
-                      Equipments
-                    </h1>
-                    <li className="mt-4">Threadmill</li>
-                    <li>Dumbbell</li>
-                    <li>Bench</li>
-                    <li>Fitness Ball</li>
-                    <li>Mini Hip Band</li>
-                    <li>Kettlebell</li>
-                  </div>
-                  <div>
-                    <h1 className="font-bold underline underline-offset-8 decoration-green">
-                      Workouts wear
-                    </h1>
-
               <div
                 className={`top-0 right-0 w-[25vw] bg-white py-10 px-4 border-l-4 border-[#c1e502] fixed h-full z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0" : "translate-x-full"
                   }`}
               >
                 <Image className='' src={Logo} alt='' width={150} height={150}></Image>
                 <h3 className="pt-10 text-lg font-semibold text-black text-start">Lorem Ipsum is simply dummy text of the printing and typesetting industry. search for will uncover many web sites still.</h3>
-
 
                 <div className='text-center'>
                   <div className='mx-28'>
