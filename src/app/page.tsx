@@ -20,22 +20,29 @@ import ClientQuot from "./components/widgets/ClientQuot";
 
 export default function Home() {
   return (
+    <>
     <div className="">
       <Hero />
-      <Slider />
+      {/* <Slider /> */}
       <Collection />
       <Logo />
       <Stamina />
-      <Slider />
+      {/* <Slider /> */}
       <Choose />
       <Gallery />
-      <Slider />
+      {/* <Slider /> */}
       {/* <TableChart/> */}
+
+      {/* <Video /> */}
+      <Slider />
+
       {/* <Video />
       <Slider /> */}
+
       <BMI />
       <ClientQuot />
       <Blog />
     </div>
+    </>
   );
 }
