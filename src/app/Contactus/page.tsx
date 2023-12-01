@@ -5,11 +5,43 @@ import Image from "next/image";
 import { Phone,MapPin, Mail, Circle } from 'lucide-react';
 import Link from "next/link";
 import Blg2 from "../../../public/blog2.jpg";
+import CoverP from "../../../public/BlogCp.jpg";
+
+import { AiOutlineSearch } from "react-icons/ai";
+import { FaGreaterThan } from "react-icons/fa6";
+import Wrapper from "../components/shared/Wrapper";
+import { GiHouse } from "react-icons/gi";
 export default function ContactUs() {
   return (
     <>
 
-
+<div className="">
+        <div className="relative">
+          <Image
+            src={CoverP}
+            alt="cover photo"
+            className="mx-auto md:h-[500px] h-[189px] md:w-full w-full"
+          />
+          <h1 className="font-serif absolute md:top-1/2 top-28 md:left-40 left-8 md:text-5xl text-base font-['Heebo'] font-bold tracking-[1] md:leading-[60px] uppercase text-white ">
+            Contact Us
+          </h1>
+        </div>
+        <div className="text-white text-xl flex items-center justify-center absolute md:top-72 top-28 font-bold md:left-[170px] left-[40px] mt-6">
+          <div className="hover:duration-700 hover:text-green flex">
+     
+          <Link
+            href="/"
+            className="hover:text-green duration-700 pl-2 font-['Heebo'] md:leading-[32px] text-white text-sm md:text-xl"
+          >
+            Home
+          </Link>
+          </div>
+          <div className="bg-[#c1e502] md:w-2 w-2 md:h-2 h-1 rounded-full mx-4 mt-2" />
+          <div className="font-['Heebo'] md:leading-[32px] text-green md:text-xl text-sm w-full duration-700">
+           ContactUs
+          </div>
+        </div>
+      </div>
 
     
 
@@ -17,98 +49,14 @@ export default function ContactUs() {
 
 
 
-<div className="relative w-full pb-[30%]">
-  <Image
-    src={Blg2}
-    alt="heroimg"
-    layout="fill"
-    objectFit="cover"
-  />
-  <div className="absolute top-[50%] left-[20%] transform translate(-50%, -50%) text-white text-center">
-    <h1 className="text-2xl md:text-5xl font-heebo">Contact Us</h1>
-    <ol className="flex flex-row mt-5">
-      <li className="flex">
-        <AiFillHome style={{ color: "white" }} 
-        className="w-9 h-9" />
-      </li>
-      <li>
-        <Link href={"/"} className="flex h-2 w-3 breadcrumb-item active text-white text-2xl m-3">
-          Home
-        </Link>
-      </li>
-      &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;&nbsp;&nbsp;
-      <li className="p-4">
-        <Circle className="h-5 w-5 fill-green" />
-      </li>
-      <li>
-        <Link href={"/"} className= "flex h-2 w-3 breadcrumb-item active text-green text-2xl m-3">
-          ContactUs
-        </Link>
-      </li>
-    </ol>
-  </div>
-</div>
-
-
-
-      {/* <div className="bg-gray-200">
-        <div className="mx-auto max-w-9xl max-h-9xl px-6 sm:px-4 lg:px-6">
-          <div className="mx-auto max-w-9xl py-20 sm:py-24 lg:max-w-none lg:py-32">
-
-
-            <div className="mt-8 space-y-6 lg:grid lg:grid-cols-3 sm:grid-col-1 lg:gap-x-4 lg:space-y-0">
-              
-           
-              <div className="group relative content-center">
-  <div className=" content-center relative h-140 w-full contrast-125 scale-100 p-20 overflow-hidden bg-white">
-  <div className=" align-center h-40 w-40 p-30 bg-green rounded-full flex justify-center items-center">
-  <Phone className="h-20 w-20 fill-gray-300 " />
-</div>
-
-
-
-    <h2 className="text-center font-bold text-4xl mt-6 leading-8">OUR LOCATION</h2>
-    <p className="text-lg text-center mt-6 mb-3">The Queen's Walk, Bishop's,London SE1<br /> 7PB, United Kingdom</p>
-  </div>
-</div>
-
-              <div className="group relative">
-  <div className="relative h-140 w-full contrast-125 scale-100 p-20 overflow-hidden bg-white">
-    <div className="h-40 w-40 p-8 bg-green rounded-full flex justify-center">
-      <MapPin className="h-20 w-20 fill-gray-300" />
-    </div>
-
-    <h2 className="text-center font-bold text-4xl mt-6 leading-8">OUR CONTACT</h2>
-    <p className="text-lg text-center mt-6 mb-3">+(1235)-1234-567-8900<br /> +(1235)-1234-567-8900</p>
-  </div>
-</div>
-
-<div className="group relative">
-  <div className="relative h-140 w-full contrast-125 scale-100 p-20 overflow-hidden bg-white">
-    <div className="h-40 w-40 p-8 bg-green rounded-full flex justify-center">
-      <Mail className="h-20 w-20 fill-gray-300" />
-    </div>
-
-    <h2 className="text-center font-bold text-4xl mt-6 leading-8">MAIL US</h2>
-    <p className="text-lg text-center mt-6 mb-3">info@peacefulthemes.com<br />
-                    info2@peacefulthemes.com</p>
-  </div>
-</div>
-           
-
-
-              
 
 
 
 
 
-
-</div> */}
-
-<div className="h-full  w-full bg-gray-800 pt-12 p-4 m-5">
+<div className="h-full  w-full bg-gray-800 pt-8 p-10 m-1 ">
   <div className="grid gap-14 md:grid-cols-3 md:gap-5">
-    <div className="rounded-xl bg-white p-6 text-center shadow-xl">
+    <div className="rounded-lg bg-white p-6 text-center shadow-xl">
       <div
         className="mx-auto flex h-40 w-40 -translate-y-12 transform items-center justify-center rounded-full bg-green shadow-lg shadow-teal-500/40">
        <Phone className="h-20 w-20 fill-gray-300 " />
@@ -164,7 +112,7 @@ export default function ContactUs() {
           fill="#F5F5FC"></path>
      
       </div>
-      <h1 className="text-black mb-3 text-xl font-medium lg:px-14 ">Mail Us</h1>
+      <h1 className="text-black mb-3 text-xl font-medium lg:px-10 ">Mail Us</h1>
       <p className="px-4 text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo iure inventore amet
         modi
         accusantium vero perspiciatis, incidunt dicta sed aspernatur!</p>
@@ -187,104 +135,21 @@ export default function ContactUs() {
 
 </div>
 
-          {/* </div></div></div> */}
-       
-
-          <section className="mb-32">
-
-{/* <div id="map" className="relative w-[475px] woverflow-hidden bg-cover bg-[50%] bg-no-repeat"> 
-  <iframe
-    src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
-    width="400%" height="600" loading="lazy"></iframe>
-</div> */}
-
-<div className="relative w-full h-96">
-    <iframe className="absolute top-0 left-0 w-full h-full"
-        src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=5&amp;output=embed&amp;iwloc=near"
-     aria-hidden="false">
-    </iframe>
-</div>
-
-<div className=" sm:p-6 md:p-20 md:ml-40 md:right-[500px]">
-  
-    <div className="block rounded-lg bg-[hsla(0,0%,100%,0.8)] sm:right-0 md:right-[240px] py-8 sm:py-20 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] sm:px-4 md:py-16 md:px-12 -ml-[200p] -mt-[200px] backdrop-blur-[60px] border border-gray-300">
- 
-
-
-
-    <div className="flex flex-wrap">
-
-
-      <div className="mb-12 bg-gray-300 sm:top-[1500px] sm:left-[0] sm:w-full sm:-[652.72px] Top-[1500px] Left[322px] W-[638px] h-[652.72px] shrink-0 grow-0 basis-auto md:px-5 lg:mb-0 lg:w-5/12 lg:px-6">
-      
         
-      <h2 className=" font-semibold  text-gray-900 md:text-center">REQUEST A QUOTE</h2>
-      <p className="mt-1 md:text-center text-gray-600"> Lorem Ipsum iLorem Ipsum is simply dummy text of the printing and typesetting industry.s simply dummy text of the and typesetting industry</p>
-
-      <div className="mt-10 grid md:grid-cols-2 grid-cols-1 gap-6">
-      
-
-      <input
-              type="text"
-              id="myInput"
-              placeholder="* Enter Name"
-              className="bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
-            />
-
-            <input
-              type="text"
-              id="myInput"
-              placeholder="* Enter Email"
-              className="bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
-            />
-
-            <input
-              type="text"
-              id="myInput"
-              placeholder="* Enter URL"
-              className="bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
-            />
        
-       <input
-              type="text"
-              id="myInput"
-              placeholder="* Enter Subject"
-              className="bg-gray h-12 px-5 hover:border-green border outline-none border-gray"
-            />
-    
-             <div className="col-span-full p-3">
 
-             
-                <textarea id="about" name="about" rows={6} className="block w-full border outline-none hover:border-green py-1.5"></textarea>
-              
-                
-
-            
-
-  <button
-    className="bg-green text-white text-lg w-52 h-14 mt-10 hover:bg-gray-500 hover:text-white font-bold"
-    
-  >SendMessage
-   
-  </button> </div>
-          </div>
-
-  
-
-
-      </div>
-       <div className="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
-        <Image src={"/image1.jpg"} alt="" height={600} width={800} />
-
-      </div> 
-
+<div className='max-w-[1240px] m-auto p-4 h-screen '>
+        <h1 className='text-5xl font-bold text-center p-4 text-green'>Contact Us</h1>
+        <form className='max-w-[600px] m-auto'>
+            <div className='grid grid-cols-2 gap-2'>
+                <input className='border shadow-lg p-3' type="text" placeholder='Name' />
+                <input className='border shadow-lg p-3' type="email" placeholder='Email' />
+            </div>
+            <input className='border shadow-lg p-3 w-full my-2' type="text" placeholder='Subject' />
+            <textarea className='border shadow-lg p-3 w-full' placeholder='Message'></textarea>
+            <button className='border shadow-lg p-3 w-full mt-2 bg-green hover:bg-black hover:text-green'>Submit</button>
+        </form>
     </div>
-
-  </div>
-</div>
-
-
-</section>  
 
     
 

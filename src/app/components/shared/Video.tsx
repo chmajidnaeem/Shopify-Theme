@@ -4,11 +4,7 @@ const Video = () => {
   return (
     <>
     {/* <video className='absolute w-auto min-w-full min-h-full max-w-none' src={"https://www.youtube.com/watch?v=rBUjOY12gJA"} autoPlay loop muted></video> */}
-    <div className="aspect-w-16 aspect-h-9">
-      <h1>Video</h1>
-  <iframe src="https://www.youtube.com/watch?v=rBUjOY12gJA"  allowFullScreen
-    className="absolute w-full h-full top-0 left-0"></iframe>
-</div>
+    <h1 className=''></h1>
 
 {/* <div className="aspect-w-16 aspect-h-9">
   <iframe

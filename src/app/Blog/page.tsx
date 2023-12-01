@@ -26,22 +26,22 @@ const Blog2 = () => {
             alt="cover photo"
             className="mx-auto md:h-[500px] h-[189px] md:w-full w-full"
           />
-          <h1 className="absolute md:top-1/2 top-28 md:left-40 left-8 md:text-5xl text-base font-['Heebo'] font-bold tracking-[1] md:leading-[60px] uppercase text-white ">
+          <h1 className="absolute md:top-1/2 top-28 md:left-40 left-8 md:text-5xl text-sm font-['Heebo'] font-bold tracking-[1] md:leading-[60px] uppercase text-white ">
             Common Workout Mistakes To Avoid
           </h1>
         </div>
         <div className="text-white text-xl flex items-center justify-center absolute md:top-72 top-28 font-bold md:left-[170px] left-[40px] mt-6">
-          <div className="hover:duration-700 hover:text-green flex">
-          <GiHouse fontSize="1.3em"  />
+          <div className="hover:duration-700 hover:text-green flex"> 
+          <GiHouse  className="text-lg md:text-2xl"  />
           <Link
             href="/"
-            className="hover:text-green duration-700 pl-2 font-['Heebo'] md:leading-[32px] text-white text-sm md:text-xl"
+            className="hover:text-green duration-700 pl-2 font-['Heebo'] md:leading-[32px] text-white text-xs mt-1 md:mt-0 md:text-xl"
           >
             Home
           </Link>
           </div>
-          <div className="bg-[#c1e502] md:w-2 w-2 md:h-2 h-1 rounded-full mx-4 mt-2" />
-          <div className="font-['Heebo'] md:leading-[32px] text-green md:text-xl text-sm w-full duration-700">
+          <div className="bg-[#c1e502] md:w-2 w-2 md:h-2 h-1 rounded-full mx-2 md:mx-4 mt-1 md:mt-2" />
+          <div className="font-['Heebo'] md:leading-[32px] text-green md:text-xl text-xs w-full duration-700">
             Common Workout Mistakes To Avoid
           </div>
         </div>

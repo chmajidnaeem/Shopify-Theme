@@ -177,10 +177,16 @@ export default function Home() {
                   still.
                 </h3>
 
+
                 <div className="text-center">
                   <div className="mx-28">
                     <IoCartOutline size={100} color={"#878787ba"} />
                   </div>
+
+                <div className='text-center'>
+                  <div className='mx-28'>
+                  <IoCartOutline size={100} color={'#878787ba'} /></div>
+
                   <p>Your Cart is Empty</p>
                   <button className="font-bold text-black bg-[#c1e502] px-6 py-2 hover:bg-black hover:text-white duration-500 transform align-center content-center mt-2">
                     Return to Shop
