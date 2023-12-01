@@ -57,19 +57,16 @@ export default function App() {
                 alt="symbol"
                 className="w-14 mx-auto mt-16 "
               />
-              <p className="mx-auto lg:w-[90%] md:w-[80%] leading-8 text-center mt-10 ">
+              <p className="text-xl mx-auto lg:w-[90%] md:w-[80%] leading-8 text-center mt-10 ">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don’t look even
-                slightly believable. If you are going to use a passage of Lorem
-                Ipsum, you need to be sure there isn’t anything embarrassing
-                hidden in the middle of some form, by injected humour, or
-                randomised words which don’t look even slightly believable text.
+                slightly believable.
               </p>
             </div>
-            <div className="text-center mx-auto mt-10 uppercase mb-[135px]">
+            <div className="text-center text-xl mx-auto mt-10 uppercase mb-[135px]">
               <p>{slide.name}</p>
-              <p className="text-green">{slide.role}</p>
+              <p className="text-green text-xl">{slide.role}</p>
               <Image
                 src={slide.image}
                 alt="img"

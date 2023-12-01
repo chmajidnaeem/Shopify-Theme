@@ -5,11 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
-// import 'swiper/css/pagination';
-
-// import './styles.css';
-
-// import required modules
 import { FreeMode, Pagination } from "swiper/modules";
 import Image from "next/image";
 import BLOG1 from "/public/images/blog1.jpg";
@@ -74,6 +69,7 @@ export default function App() {
             <Image src={BLOG8} alt="blog" width={700} height={500} />
           </div>
         </SwiperSlide>
+        
       </Swiper>
     </>
   );
