@@ -22,23 +22,23 @@ export default function Home() {
   return (
     <>
     <div className="">
-      <Hero />
+      {/* <Hero /> */}
       {/* <Slider /> */}
       <Collection />
       <Logo />
-      <Stamina />
-      {/* <Slider /> */}
+      {/* <Stamina /> */}
+
+      {/* <Slider /> */}  
       <Choose />
       <Gallery />
+
       {/* <Slider /> */}
       {/* <TableChart/> */}
-
       {/* <Video /> */}
       <Slider />
-
       {/* <Video />
-      <Slider /> */}
 
+      <Slider /> */}
       <BMI />
       <ClientQuot />
       <Blog />
