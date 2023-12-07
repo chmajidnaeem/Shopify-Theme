@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
-import { FreeMode, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import BLOG1 from "/public/images/blog1.jpg";
 import BLOG2 from "/public/images/blog2.jpg";
@@ -17,17 +17,43 @@ import BLOG7 from "/public/images/blog7.jpg";
 import BLOG8 from "/public/images/blog8.jpg";
 
 export default function App() {
+
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  };
+
   return (
     <>
       <Swiper
-        slidesPerView={2.5}
-        spaceBetween={20}
-        freeMode={true}
-        pagination={{
-          clickable: true,
+        // slidesPerView={3}
+        // spaceBetween={30}
+        centeredSlides={false}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[Autoplay]}
         className="mySwiper"
+        breakpoints={breakpoints}
       >
         <SwiperSlide>
           <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-10 lg:mt-20">

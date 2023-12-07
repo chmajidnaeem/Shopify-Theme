@@ -57,7 +57,7 @@ export default function App() {
                 alt="symbol"
                 className="w-14 mx-auto mt-16 "
               />
-              <p className="text-xl mx-auto lg:w-[90%] md:w-[80%] leading-8 text-center mt-10 ">
+              <p className="text:lg md:text-xl mx-auto lg:w-[90%] md:w-[80%] leading-8 text-center mt-10 ">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don’t look even
