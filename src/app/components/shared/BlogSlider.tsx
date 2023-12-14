@@ -1,16 +1,11 @@
 "use client";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
-import "swiper/css/free-mode";
-// import 'swiper/css/pagination';
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import './styles.css';
-
-// import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import BLOG1 from "/public/images/blog1.jpg";
 import BLOG2 from "/public/images/blog2.jpg";
@@ -20,127 +15,309 @@ import BLOG5 from "/public/images/blog5.jpg";
 import BLOG6 from "/public/images/blog6.jpg";
 import BLOG7 from "/public/images/blog7.jpg";
 import BLOG8 from "/public/images/blog8.jpg";
+import { FaStar } from "react-icons/fa6";
 
 export default function App() {
+  const breakpoints = {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  };
+
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        freeMode={true}
-        pagination={{
-          clickable: true,
+        // slidesPerView={3}
+        // spaceBetween={30}
+        centeredSlides={false}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
         }}
-        modules={[FreeMode, Pagination]}
-        className="mySwiper "
+        modules={[Autoplay]}
+        className="mySwiper"
+        breakpoints={breakpoints}
       >
         <SwiperSlide>
-          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-20 ">
+          <div className="-mb-8 sm:mb-[135px] sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG1} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Acrobatics</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Acrobatics
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               workout with Get six-pack
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">abs ‘Magic Mike’</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              abs ‘Magic Mike’
+            </p>
+            <div className="flex items-center gap-5 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG2} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Gymnastics</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Gymnastics
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               Workout Condition For All
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">Around Fitness</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              Around Fitness
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG3} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Yoga</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">Yoga</p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               Meet our professional
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">Gymster Trainer’</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              Gymster Trainer’
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG4} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Boot camps</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Boot camps
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               Condition for all around
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">fitness classes</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              fitness classes
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG5} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Crossfit</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Crossfit
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               Our organized Training
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">center & workshop</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              center & workshop
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG6} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Training Gyms</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">Meet our fitness</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">ambassador grace</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Training Gyms
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
+              Meet our fitness
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              ambassador grace
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG7} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Gymastics</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Gymastics
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
               Common workout mistakes
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">to avoid</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              to avoid
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
               <p>October 4, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="sm:uppercase mt-20">
+          <div className="sm:uppercase mt-10 md:mt-20">
             <Image src={BLOG8} alt="blog" />
-            <p className="text-[14px] sm:text-[16px] mt-4 sm:mt-8">Crossfit</p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-10 invisible sm:visible">
-              Why you should go to yoga
+            <div>
+              <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+                Crossfit
+              </p>
+              <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
+                Why you should go to yoga
+              </p>
+              <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+                then gym
+              </p>
+              <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
+                <p>October 19, 2022</p>
+                <div className="flex gap-2">
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="sm:uppercase mt-10 md:mt-20">
+            <Image src={BLOG6} alt="blog" />
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Training Gyms
             </p>
-            <p className="font-bold text-[16px] xl:text-[20px] lg:leading-6 invisible sm:visible">then gym</p>
-            <div className="lg:flex gap-2 text-[14px] lg:leading-10 invisible sm:visible">
-              <p>October 19, 2022</p>
-              <li className="list-disc lg:ml-6">0 Comments</li>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
+              Meet our fitness
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              ambassador grace
+            </p>
+            <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
+              <p>October 4, 2022</p>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        {/* <SwiperSlide>
+          <div className="sm:uppercase mt-10 md:mt-20">
+            <Image src={BLOG7} alt="blog" />
+            <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+              Gymastics
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
+              Common workout mistakes
+            </p>
+            <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+              to avoid
+            </p>
+            <div className="flex items-center gap-5 text-[14px] lg:leading-10">
+              <p>October 4, 2022</p>
+              <div className="flex gap-2">
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+                <FaStar size={20} className="text-green" />
+              </div>
+            </div>
+          </div>
+        </SwiperSlide> */}
+        <SwiperSlide>
+          <div className="sm:uppercase mt-10 md:mt-20">
+            <Image src={BLOG8} alt="blog" />
+            <div>
+              <p className="text-xl sm:text-lg font-bold mt-4 sm:mt-8">
+                Crossfit
+              </p>
+              <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-10">
+                Why you should go to yoga
+              </p>
+              <p className="font-semibold text-[16px] xl:text-[20px] lg:leading-6">
+                then gym
+              </p>
+              <div className="flex items-center gap-5 lg:gap-1 text-[14px] lg:leading-10">
+                <p>October 19, 2022</p>
+                <div className="flex gap-2">
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                  <FaStar size={20} className="text-green" />
+                </div>
+              </div>
             </div>
           </div>
         </SwiperSlide>

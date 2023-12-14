@@ -1,119 +1,80 @@
-"use client";
-import React, { useRef, useState } from "react";
-// Import Swiper React components
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
+
 import Image from "next/image";
-import Symbol from "/public/images/symbol.png";
+import Symbol from "../../../../public/images/Symbol.png";
 import JL from "/public/images/cl1.jpg";
 import AS from "/public/images/FT.jpg";
-import SA from "/public/images/YM.jpg"
-import CEO from "/public/images/CEO.jpg"
+import SA from "/public/images/YM.jpg";
+import CEO from "/public/images/CEO.jpg";
 
-
+const slides = [
+  {
+    name: "James Lives",
+    role: "Personal Trainer",
+    image: JL,
+  },
+  {
+    name: "Alex Snax",
+    role: "Fitness Trainer",
+    image: AS,
+  },
+  {
+    name: "Stive Alex",
+    role: "Yoga Mentor",
+    image: SA,
+  },
+  {
+    name: "James Lives",
+    role: "CEO",
+    image: CEO,
+  },
+];
 
 export default function App() {
   return (
     <>
-      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-        <SwiperSlide>
-          <div>
-            <Image src={Symbol} alt="symbol" className="w-14 mx-auto mt-16" />
-            <p className="mx-auto  lg:w-[1000px] leading-8 text-center mt-10">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don’t look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn’t anything embarrassing
-              hidden in the middle of some form, by injected humour, or
-              randomised words which don’t look even slightly believable text.
-            </p>
-          </div>
-          <div className="text-center mx-auto mt-10 uppercase mb-[135px]">
-            <p>James Lives</p>
-            <p className="text-green">Personal Tranier</p>
-            <Image
-              src={JL}
-              alt="img"
-              className="mt-5 text-center mx-auto rounded-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="">
-            <Image src={Symbol} alt="symbol" className="w-14 mx-auto mt-16" />
-            <p className="mx-auto  lg:w-[1000px] leading-8 text-center mt-10">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don’t look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn’t anything embarrassing
-              hidden in the middle of some form, by injected humour, or
-              randomised words which don’t look even slightly believable text.
-            </p>
-          </div>
-          <div className="text-center mx-auto mt-10 uppercase mb-[135px]">
-            <p>Alex Snax</p>
-            <p className="text-green">Fitness Tranier</p>
-            <Image
-              src={AS}
-              alt="img"
-              className="mt-5 text-center mx-auto rounded-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="">
-            <Image src={Symbol} alt="symbol" className="w-14 mx-auto mt-16" />
-            <p className="mx-auto  lg:w-[1000px] leading-8 text-center mt-10">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don’t look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn’t anything embarrassing
-              hidden in the middle of some form, by injected humour, or
-              randomised words which don’t look even slightly believable text.
-            </p>
-          </div>
-          <div className="text-center mx-auto mt-10 uppercase mb-[135px]">
-            <p>Stive Alex</p>
-            <p className="text-green">Yoga Mentor</p>
-            <Image
-              src={SA}
-              alt="img"
-              className="mt-5 text-center mx-auto rounded-full"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="">
-            <Image src={Symbol} alt="symbol" className="w-14 mx-auto mt-16" />
-            <p className="mx-auto  lg:w-[1000px] leading-8 text-center mt-10">
-              There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form, by
-              injected humour, or randomised words which don’t look even
-              slightly believable. If you are going to use a passage of Lorem
-              Ipsum, you need to be sure there isn’t anything embarrassing
-              hidden in the middle of some form, by injected humour, or
-              randomised words which don’t look even slightly believable text.
-            </p>
-          </div>
-          <div className="text-center mx-auto mt-10 uppercase mb-[135px]">
-            <p>James Lives</p>
-            <p className="text-green">CEO</p>
-            <Image
-              src={CEO}
-              alt="img"
-              className="mt-5 text-center mx-auto rounded-full"
-            />
-          </div>
-        </SwiperSlide>
+      <Swiper
+        pagination={{
+          dynamicBullets: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        {slides.map((slide: any, index: any) => (
+          <SwiperSlide key={index}>
+            <div className="text-center mx-auto mt-10">
+              <Image
+                src={Symbol}
+                alt="symbol"
+                className="w-14 mx-auto mt-16 "
+              />
+              <p className="text:lg md:text-xl mx-auto lg:w-[90%] md:w-[80%] leading-8 text-center mt-10 ">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don’t look even
+                slightly believable.
+              </p>
+            </div>
+            <div className="text-center text-xl mx-auto mt-10 uppercase mb-[135px]">
+              <p>{slide.name}</p>
+              <p className="text-green text-xl">{slide.role}</p>
+              <Image
+                src={slide.image}
+                alt="img"
+                className="mt-5 text-center mx-auto rounded-full"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

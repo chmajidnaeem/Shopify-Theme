@@ -1,41 +1,46 @@
 import Image from "next/image";
 import Wrapper from "../shared/Wrapper";
-import Imgst from "/public/images/st.jpg";
+import st2 from "/public/images/st2.png";
 import { BiCheck } from "react-icons/bi";
 
 const Stamina = () => {
   return (
-    <div className=" bg-black text-[#FFF] overflow-hidden">
+    <div className=" bg-black h-[172] text-[#FFF] overflow-hidden md:px-20">
       <Wrapper>
-        <div className="lg:flex">
-          <Image src={Imgst} alt="img" className="w-[500px] h-[600px] p-10" />
+        <div className="xl:flex justify-between lg:mx-20 md:mx-3">
+          <div className="w-[50%] invisible md:visible"> 
+          <Image src={st2} alt="img" width={750} height={750} className="p-10" />
+          </div>
 
-          <div className="p-16 mx-auto">
-            <h1 className="font-bold text-2xl lg:text-[32px]">BODIES OF STEMINA STRENGH</h1>
-            <p className=" text-[16px] font-[Heebo] w-[120%] leading-10">
+          <div className="mx-auto md:w-[50%] md:leading-10">
+            {/* <h1 className="font-bold text-2xl lg:text-5xl text-green p-10 text-center">BODIES OF STEMINA STRENGH</h1> */}
+            <p className="md:mt-8 text-bold md:leading-10 md:pt-3 text-green text-lg md:text-4xl">
+            BODIES OF STEMINA STRENGH
+            </p>
+            <p className=" text-[16px] md:leading-10 md:pt-3 mt-10 md:mt-20">
               It is a long established fact that a reader will be distracted by
               the readable content
             </p>
-            <p className="text-[16px] font-[Heebo]">of a page when looking at its page when at its layout</p>
-            <p className="text-[16px] font-[Heebo]  mt-5 leading-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don’t look even slightly believable.</p>
-            <div className="flex gap-3 items-center mt-8">
-                <BiCheck className="text-green"/>
-                <p className="text-[18px] font-[Heebo]">HELP REDUCE STRESS, STRESS BODY BALANCE</p>
+            <p className="text-[16px]">of a page when looking at its page when at its layout</p>
+            <p className="text-[16px]  mt-5 md:leading-10">There are many variations of passages of Lorem Ipsum available, but the majority <br/>have suffered alteration in some form, by injected humour, or randomised words<br/> which don’t look even slightly believable.</p>
+            <div className="flex gap-3 items-center mt-5 md:mt-8">
+              <BiCheck className="text-green" size={27} />
+              <p className="text-[18px]">Help reduce stress, stress body balance</p>
             </div>
             <div className="flex gap-3 items-center">
-                <BiCheck className="text-green"/>
-                <p className="text-[18px] font-[Heebo]">IMPROVE MOOD EFECTIVILY SELF DEFENSE</p>
+              <BiCheck className="text-green" size={27} />
+              <p className="text-[18px]"> Improve mood efectivily self defence</p>
             </div>
             <div className="flex gap-3 items-center">
-                <BiCheck className="text-green"/>
-                <p className="text-[18px] font-[Heebo]">FLEXIBILITY OF THE BODY PSYCHO</p>
+              <BiCheck className="text-green" size={27} />
+              <p className="text-[18px]">Flexibility of the body psycho</p>
             </div>
-            <div className="group flex gap-2 justify-center items-center bg-green w-[130px] py-2 mt-8 uppercase font-medium font-[Heebo] text-[#1D1D1D] hover:bg-white">
-            <div>Read more</div>
-            <div className="w-2 h-2 bg-black rounded-full hover:bg-white"></div>
+            <div className="mb-10 mt-5 md:mt-20 group flex gap-2 justify-center items-center bg-green w-[200px] py-4 uppercase font-medium text-[#1D1D1D] hover:bg-white  duration-500 transform">
+              <div>Read more</div>
+              <div className="w-2 h-2 bg-black rounded-full hover:bg-white"></div>
+            </div>
           </div>
-          </div>
-          
+
         </div>
       </Wrapper>
     </div>

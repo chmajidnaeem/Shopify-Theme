@@ -3,8 +3,8 @@ import React from "react";
 const Slider = () => {
   return (
     <>
-      <div className="marquee-container invisible lg:visible">
-        <div className="px-14 ml-32 flex justify-center items-center gap-16 marquee-content text-[30px] font-bold uppercase">
+      <div className="marquee-container">
+        <div className="px-14 ml-32 flex justify-center items-center gap-16 marquee-content text-3xl font-bold uppercase text-black">
           <li>Health and gym</li>
           <li>pure gym space</li>
           <li>cardio man</li>
